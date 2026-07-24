@@ -1,0 +1,11 @@
+"./syscfg/board.obj"
+"./syscfg/c2000ware_libraries.obj"
+"./app/main.obj"
+"./device/device.obj"
+"./device/f28004x_codestartbranch.obj"
+"./hw/hw_i2c.obj"
+"./hw/meter_lcd.obj"
+"../28004x_generic_ram_lnk.cmd"
+"C:/ti/c2000/C2000Ware_6_00_01_00/driverlib/f28004x/driverlib/ccs/Debug/driverlib.lib"
+-lc2000ware_libraries.cmd.genlibs
+-llibc.a

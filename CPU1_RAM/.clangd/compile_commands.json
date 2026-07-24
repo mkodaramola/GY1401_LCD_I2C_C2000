@@ -1,0 +1,37 @@
+[
+   {
+      "directory" : "C:/Users/mkoda/workspace_ccstheia/LCD_I2C/CPU1_RAM",
+      "command"   : "clang++ -I\"C:/Users/mkoda/workspace_ccstheia/LCD_I2C\" -I\"C:/ti/c2000/C2000Ware_6_00_01_00\" -I\"C:/Users/mkoda/workspace_ccstheia/LCD_I2C/device\" -I\"C:/ti/c2000/C2000Ware_6_00_01_00/driverlib/f28004x/driverlib/\" -I\"C:/ti/ccs2031/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -I\"C:/Users/mkoda/workspace_ccstheia/LCD_I2C/hw/includes\" -DDEBUG -I\"C:/Users/mkoda/workspace_ccstheia/LCD_I2C/CPU1_RAM/syscfg\" -DF28004x=1 -xc",
+      "file"      : "C:/Users/mkoda/workspace_ccstheia/LCD_I2C/device/device.c"
+   },
+   {
+      "directory" : "C:/Users/mkoda/workspace_ccstheia/LCD_I2C/CPU1_RAM",
+      "command"   : "clang++ -I\"C:/Users/mkoda/workspace_ccstheia/LCD_I2C\" -I\"C:/ti/c2000/C2000Ware_6_00_01_00\" -I\"C:/Users/mkoda/workspace_ccstheia/LCD_I2C/device\" -I\"C:/ti/c2000/C2000Ware_6_00_01_00/driverlib/f28004x/driverlib/\" -I\"C:/ti/ccs2031/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -I\"C:/Users/mkoda/workspace_ccstheia/LCD_I2C/hw/includes\" -DDEBUG -I\"C:/Users/mkoda/workspace_ccstheia/LCD_I2C/CPU1_RAM/syscfg\" -DF28004x=1",
+      "file"      : "C:/Users/mkoda/workspace_ccstheia/LCD_I2C/device/f28004x_codestartbranch.asm"
+   },
+   {
+      "directory" : "C:/Users/mkoda/workspace_ccstheia/LCD_I2C/CPU1_RAM",
+      "command"   : "clang++ -I\"C:/Users/mkoda/workspace_ccstheia/LCD_I2C\" -I\"C:/ti/c2000/C2000Ware_6_00_01_00\" -I\"C:/Users/mkoda/workspace_ccstheia/LCD_I2C/device\" -I\"C:/ti/c2000/C2000Ware_6_00_01_00/driverlib/f28004x/driverlib/\" -I\"C:/ti/ccs2031/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -I\"C:/Users/mkoda/workspace_ccstheia/LCD_I2C/hw/includes\" -DDEBUG -I\"C:/Users/mkoda/workspace_ccstheia/LCD_I2C/CPU1_RAM/syscfg\" -DF28004x=1 -xc++",
+      "file"      : "C:/Users/mkoda/workspace_ccstheia/LCD_I2C/hw/hw_i2c.cpp"
+   },
+   {
+      "directory" : "C:/Users/mkoda/workspace_ccstheia/LCD_I2C/CPU1_RAM",
+      "command"   : "clang++ -I\"C:/Users/mkoda/workspace_ccstheia/LCD_I2C\" -I\"C:/ti/c2000/C2000Ware_6_00_01_00\" -I\"C:/Users/mkoda/workspace_ccstheia/LCD_I2C/device\" -I\"C:/ti/c2000/C2000Ware_6_00_01_00/driverlib/f28004x/driverlib/\" -I\"C:/ti/ccs2031/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -I\"C:/Users/mkoda/workspace_ccstheia/LCD_I2C/hw/includes\" -DDEBUG -I\"C:/Users/mkoda/workspace_ccstheia/LCD_I2C/CPU1_RAM/syscfg\" -DF28004x=1 -xc++",
+      "file"      : "C:/Users/mkoda/workspace_ccstheia/LCD_I2C/hw/meter_lcd.cpp"
+   },
+   {
+      "directory" : "C:/Users/mkoda/workspace_ccstheia/LCD_I2C/CPU1_RAM",
+      "command"   : "clang++ -I\"C:/Users/mkoda/workspace_ccstheia/LCD_I2C\" -I\"C:/ti/c2000/C2000Ware_6_00_01_00\" -I\"C:/Users/mkoda/workspace_ccstheia/LCD_I2C/device\" -I\"C:/ti/c2000/C2000Ware_6_00_01_00/driverlib/f28004x/driverlib/\" -I\"C:/ti/ccs2031/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -I\"C:/Users/mkoda/workspace_ccstheia/LCD_I2C/hw/includes\" -DDEBUG -I\"C:/Users/mkoda/workspace_ccstheia/LCD_I2C/CPU1_RAM/syscfg\" -DF28004x=1 -xc++",
+      "file"      : "C:/Users/mkoda/workspace_ccstheia/LCD_I2C/app/main.cpp"
+   },
+   {
+      "directory" : "C:/Users/mkoda/workspace_ccstheia/LCD_I2C/CPU1_RAM",
+      "command"   : "clang++ -I\"C:/Users/mkoda/workspace_ccstheia/LCD_I2C\" -I\"C:/ti/c2000/C2000Ware_6_00_01_00\" -I\"C:/Users/mkoda/workspace_ccstheia/LCD_I2C/device\" -I\"C:/ti/c2000/C2000Ware_6_00_01_00/driverlib/f28004x/driverlib/\" -I\"C:/ti/ccs2031/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -I\"C:/Users/mkoda/workspace_ccstheia/LCD_I2C/hw/includes\" -DDEBUG -I\"C:/Users/mkoda/workspace_ccstheia/LCD_I2C/CPU1_RAM/syscfg\" -DF28004x=1 -xc",
+      "file"      : "C:/Users/mkoda/workspace_ccstheia/LCD_I2C/CPU1_RAM/syscfg/board.c"
+   },
+   {
+      "directory" : "C:/Users/mkoda/workspace_ccstheia/LCD_I2C/CPU1_RAM",
+      "command"   : "clang++ -I\"C:/Users/mkoda/workspace_ccstheia/LCD_I2C\" -I\"C:/ti/c2000/C2000Ware_6_00_01_00\" -I\"C:/Users/mkoda/workspace_ccstheia/LCD_I2C/device\" -I\"C:/ti/c2000/C2000Ware_6_00_01_00/driverlib/f28004x/driverlib/\" -I\"C:/ti/ccs2031/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -I\"C:/Users/mkoda/workspace_ccstheia/LCD_I2C/hw/includes\" -DDEBUG -I\"C:/Users/mkoda/workspace_ccstheia/LCD_I2C/CPU1_RAM/syscfg\" -DF28004x=1 -xc",
+      "file"      : "C:/Users/mkoda/workspace_ccstheia/LCD_I2C/CPU1_RAM/syscfg/c2000ware_libraries.c"
+   }
+]

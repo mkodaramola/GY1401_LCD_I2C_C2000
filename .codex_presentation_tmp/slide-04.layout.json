@@ -1,0 +1,667 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/p5wstu",
+    "id": "p5wstu",
+    "slide": 4,
+    "layoutId": "b7b5fb79-2c85-42fa-a20a-33d36eea90c7",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "2fdd5624-6156-49e8-bdda-17eb6eda92ee",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFFFFF",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "b7b5fb79-2c85-42fa-a20a-33d36eea90c7",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "2fdd5624-6156-49e8-bdda-17eb6eda92ee",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "2fdd5624-6156-49e8-bdda-17eb6eda92ee",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0nq10b69",
+      "id": "1",
+      "bbox": [
+        56,
+        40,
+        500,
+        30
+      ],
+      "geometry": "rect",
+      "text": "GY1401 PROGRAMMING",
+      "textPreview": "GY1401 PROGRAMMING",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#5F6872",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "GY1401 PROGRAMMING"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "GY1401 PROGRAMMING",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#5F6872",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "GY1401 PROGRAMMING",
+              "fontSize": 15,
+              "color": "#5F6872",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zmhkr6po",
+      "id": "2",
+      "bbox": [
+        56,
+        82,
+        1030,
+        88
+      ],
+      "geometry": "rect",
+      "text": "Numeric display depends on packed LCD byte patterns",
+      "textPreview": "Numeric display depends on packed LCD byte patterns",
+      "resolvedFontSize": 42,
+      "resolvedTextStyle": {
+        "fontSize": 42,
+        "typeface": "+mn-lt",
+        "color": "#101418",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Numeric display depends on packed LCD byte patterns"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Numeric display depends on packed LCD byte patterns",
+          "resolvedTextStyle": {
+            "fontSize": 42,
+            "color": "#101418",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Numeric display depends on packed LCD byte patterns",
+              "fontSize": 42,
+              "color": "#101418",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yl8jy1o3",
+      "id": "3",
+      "bbox": [
+        56,
+        178,
+        1168,
+        2
+      ],
+      "geometry": "rect",
+      "fillColor": "#C8CDD3",
+      "lineColor": "#C8CDD3",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9sj2x07q",
+      "id": "4",
+      "bbox": [
+        56,
+        216,
+        770,
+        76
+      ],
+      "geometry": "rect",
+      "text": "The display is not an ASCII LCD. Digits are converted to controller-specific segment bytes, then written at the main message DDRAM window.",
+      "textPreview": "The display is not an ASCII LCD. Digits are converted to controller-specific segment bytes, then written at the main message DDRAM window.",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "color": "#5F6872",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The display is not an ASCII LCD. Digits are converted to controller-specific"
+          },
+          {
+            "index": 2,
+            "text": "segment bytes, then written at the main message DDRAM window."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The display is not an ASCII LCD. Digits are converted to controller-specific segment bytes, then written at the main message DDRAM window.",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#5F6872",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "The display is not an ASCII LCD. Digits are converted to controller-specific segment bytes, then written at the main message DDRAM window.",
+              "fontSize": 24,
+              "color": "#5F6872",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8rql4v65",
+      "id": "5",
+      "bbox": [
+        70,
+        334,
+        500,
+        205
+      ],
+      "geometry": "rect",
+      "fillColor": "#F7F9FB",
+      "lineColor": "#D9DDE2",
+      "lineWidth": 1
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nqhkvqpk",
+      "id": "6",
+      "bbox": [
+        100,
+        366,
+        300,
+        32
+      ],
+      "geometry": "rect",
+      "text": "Example digit LUT",
+      "textPreview": "Example digit LUT",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "color": "#101418",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Example digit LUT"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Example digit LUT",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#101418",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Example digit LUT",
+              "fontSize": 24,
+              "color": "#101418",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mp832loz",
+      "id": "7",
+      "bbox": [
+        100,
+        412,
+        300,
+        112
+      ],
+      "geometry": "rect",
+      "text": "0 -> 0xFA\n1 -> 0x0A\n8 -> 0xFE\n9 -> 0xCE",
+      "textPreview": "0 -> 0xFA | 1 -> 0x0A | 8 -> 0xFE | 9 -> 0xCE",
+      "resolvedFontSize": 25,
+      "resolvedTextStyle": {
+        "fontSize": 25,
+        "typeface": "+mn-lt",
+        "color": "#101418",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 4,
+        "lines": [
+          {
+            "index": 1,
+            "text": "0 -> 0xFA"
+          },
+          {
+            "index": 2,
+            "text": "1 -> 0x0A"
+          },
+          {
+            "index": 3,
+            "text": "8 -> 0xFE"
+          },
+          {
+            "index": 4,
+            "text": "9 -> 0xCE"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "0 -> 0xFA",
+          "resolvedTextStyle": {
+            "fontSize": 25,
+            "color": "#101418",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "0 -> 0xFA",
+              "fontSize": 25,
+              "color": "#101418",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "1 -> 0x0A",
+          "resolvedTextStyle": {
+            "fontSize": 25,
+            "color": "#101418",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "1 -> 0x0A",
+              "fontSize": 25,
+              "color": "#101418",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "8 -> 0xFE",
+          "resolvedTextStyle": {
+            "fontSize": 25,
+            "color": "#101418",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "8 -> 0xFE",
+              "fontSize": 25,
+              "color": "#101418",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 4,
+          "text": "9 -> 0xCE",
+          "resolvedTextStyle": {
+            "fontSize": 25,
+            "color": "#101418",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "9 -> 0xCE",
+              "fontSize": 25,
+              "color": "#101418",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xgj2107m",
+      "id": "8",
+      "bbox": [
+        660,
+        334,
+        500,
+        205
+      ],
+      "geometry": "rect",
+      "fillColor": "#F7F9FB",
+      "lineColor": "#D9DDE2",
+      "lineWidth": 1
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wval8v6h",
+      "id": "9",
+      "bbox": [
+        690,
+        366,
+        300,
+        32
+      ],
+      "geometry": "rect",
+      "text": "Write target",
+      "textPreview": "Write target",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "color": "#101418",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Write target"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Write target",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#101418",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Write target",
+              "fontSize": 24,
+              "color": "#101418",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6pwnax87",
+      "id": "10",
+      "bbox": [
+        690,
+        412,
+        360,
+        84
+      ],
+      "geometry": "rect",
+      "text": "DDRAM 0x18\n11 bytes\nright-aligned digit packing",
+      "textPreview": "DDRAM 0x18 | 11 bytes | right-aligned digit packing",
+      "resolvedFontSize": 25,
+      "resolvedTextStyle": {
+        "fontSize": 25,
+        "typeface": "+mn-lt",
+        "color": "#101418",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "DDRAM 0x18"
+          },
+          {
+            "index": 2,
+            "text": "11 bytes"
+          },
+          {
+            "index": 3,
+            "text": "right-aligned digit packing"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "DDRAM 0x18",
+          "resolvedTextStyle": {
+            "fontSize": 25,
+            "color": "#101418",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "DDRAM 0x18",
+              "fontSize": 25,
+              "color": "#101418",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "11 bytes",
+          "resolvedTextStyle": {
+            "fontSize": 25,
+            "color": "#101418",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "11 bytes",
+              "fontSize": 25,
+              "color": "#101418",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "right-aligned digit packing",
+          "resolvedTextStyle": {
+            "fontSize": 25,
+            "color": "#101418",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "right-aligned digit packing",
+              "fontSize": 25,
+              "color": "#101418",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

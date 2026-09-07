@@ -1,0 +1,809 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/8kex64",
+    "id": "8kex64",
+    "slide": 2,
+    "layoutId": "b7b5fb79-2c85-42fa-a20a-33d36eea90c7",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "2fdd5624-6156-49e8-bdda-17eb6eda92ee",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFFFFF",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "b7b5fb79-2c85-42fa-a20a-33d36eea90c7",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "2fdd5624-6156-49e8-bdda-17eb6eda92ee",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "2fdd5624-6156-49e8-bdda-17eb6eda92ee",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8bqlgjux",
+      "id": "1",
+      "bbox": [
+        56,
+        40,
+        500,
+        30
+      ],
+      "geometry": "rect",
+      "text": "GY1401 / C2000 ENERGY METER",
+      "textPreview": "GY1401 / C2000 ENERGY METER",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#5F6872",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "GY1401 / C2000 ENERGY METER"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "GY1401 / C2000 ENERGY METER",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#5F6872",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "GY1401 / C2000 ENERGY METER",
+              "fontSize": 15,
+              "color": "#5F6872",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nah47edc",
+      "id": "2",
+      "bbox": [
+        56,
+        82,
+        1030,
+        88
+      ],
+      "geometry": "rect",
+      "text": "GY1401 work established the C2000 LCD path",
+      "textPreview": "GY1401 work established the C2000 LCD path",
+      "resolvedFontSize": 42,
+      "resolvedTextStyle": {
+        "fontSize": 42,
+        "typeface": "+mn-lt",
+        "color": "#101418",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "GY1401 work established the C2000 LCD path"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "GY1401 work established the C2000 LCD path",
+          "resolvedTextStyle": {
+            "fontSize": 42,
+            "color": "#101418",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "GY1401 work established the C2000 LCD path",
+              "fontSize": 42,
+              "color": "#101418",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/m9o3e9cr",
+      "id": "3",
+      "bbox": [
+        56,
+        178,
+        1168,
+        2
+      ],
+      "geometry": "rect",
+      "fillColor": "#C8CDD3",
+      "lineColor": "#C8CDD3",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/x0zmd8ve",
+      "id": "4",
+      "bbox": [
+        56,
+        214,
+        650,
+        88
+      ],
+      "geometry": "rect",
+      "text": "The implementation proves the CN91C4S48-based GY1401 can be configured and updated from the C2000 firmware using a small reusable LCD abstraction.",
+      "textPreview": "The implementation proves the CN91C4S48-based GY1401 can be configured and updated from the C2000 firmware using a small reusable LCD abs...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "color": "#5F6872",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The implementation proves the CN91C4S48-based GY1401 can"
+          },
+          {
+            "index": 2,
+            "text": "be configured and updated from the C2000 firmware using a"
+          },
+          {
+            "index": 3,
+            "text": "small reusable LCD abstraction."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The implementation proves the CN91C4S48-based GY1401 can be configured and updated from the C2000 firmware using a small reusable LCD abstraction.",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#5F6872",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "The implementation proves the CN91C4S48-based GY1401 can be configured and updated from the C2000 firmware using a small reusable LCD abstraction.",
+              "fontSize": 24,
+              "color": "#5F6872",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wzqlk3u9",
+      "id": "5",
+      "bbox": [
+        56,
+        346,
+        44,
+        28
+      ],
+      "geometry": "rect",
+      "text": "01",
+      "textPreview": "01",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#1E88E5",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "01"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "01",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#1E88E5",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "01",
+              "fontSize": 16,
+              "color": "#1E88E5",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vyh4bydo",
+      "id": "6",
+      "bbox": [
+        114,
+        344,
+        622,
+        34
+      ],
+      "geometry": "rect",
+      "text": "I2C controller path initialized on C2000Ware driverlib.",
+      "textPreview": "I2C controller path initialized on C2000Ware driverlib.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "color": "#101418",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "I2C controller path initialized on C2000Ware driverlib."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "I2C controller path initialized on C2000Ware driverlib.",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "color": "#101418",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "I2C controller path initialized on C2000Ware driverlib.",
+              "fontSize": 22,
+              "color": "#101418",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ax83itc3",
+      "id": "7",
+      "bbox": [
+        56,
+        400,
+        44,
+        28
+      ],
+      "geometry": "rect",
+      "text": "02",
+      "textPreview": "02",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#1E88E5",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "02"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "02",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#1E88E5",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "02",
+              "fontSize": 16,
+              "color": "#1E88E5",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/54jmh8vq",
+      "id": "8",
+      "bbox": [
+        114,
+        398,
+        622,
+        34
+      ],
+      "geometry": "rect",
+      "text": "CN91C4S48 command sequence sets display timing, contrast, blink and enable state.",
+      "textPreview": "CN91C4S48 command sequence sets display timing, contrast, blink and enable state.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "color": "#101418",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "CN91C4S48 command sequence sets display timing, contrast, blink"
+          },
+          {
+            "index": 2,
+            "text": "and enable state."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "CN91C4S48 command sequence sets display timing, contrast, blink and enable state.",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "color": "#101418",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "CN91C4S48 command sequence sets display timing, contrast, blink and enable state.",
+              "fontSize": 22,
+              "color": "#101418",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/k3alo3u5",
+      "id": "9",
+      "bbox": [
+        56,
+        454,
+        44,
+        28
+      ],
+      "geometry": "rect",
+      "text": "03",
+      "textPreview": "03",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#1E88E5",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "03"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "03",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#1E88E5",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "03",
+              "fontSize": 16,
+              "color": "#1E88E5",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2dgj2p0v",
+      "id": "10",
+      "bbox": [
+        114,
+        452,
+        622,
+        34
+      ],
+      "geometry": "rect",
+      "text": "A display RAM shadow lets numeric and fixed-symbol writes stay isolated.",
+      "textPreview": "A display RAM shadow lets numeric and fixed-symbol writes stay isolated.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "color": "#101418",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "A display RAM shadow lets numeric and fixed-symbol writes stay"
+          },
+          {
+            "index": 2,
+            "text": "isolated."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "A display RAM shadow lets numeric and fixed-symbol writes stay isolated.",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "color": "#101418",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "A display RAM shadow lets numeric and fixed-symbol writes stay isolated.",
+              "fontSize": 22,
+              "color": "#101418",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nepkva1g",
+      "id": "11",
+      "bbox": [
+        790,
+        226,
+        350,
+        270
+      ],
+      "geometry": "rect",
+      "fillColor": "#F3F5F7",
+      "lineColor": "#D9DDE2",
+      "lineWidth": 1
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ofy14fi1",
+      "id": "12",
+      "bbox": [
+        826,
+        262,
+        260,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Core result",
+      "textPreview": "Core result",
+      "resolvedFontSize": 26,
+      "resolvedTextStyle": {
+        "fontSize": 26,
+        "typeface": "+mn-lt",
+        "color": "#101418",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Core result"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Core result",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "color": "#101418",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Core result",
+              "fontSize": 26,
+              "color": "#101418",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pg72xkjm",
+      "id": "13",
+      "bbox": [
+        826,
+        320,
+        260,
+        130
+      ],
+      "geometry": "rect",
+      "text": "Numbers display correctly through MeterLcd::Print(), which writes packed byte patterns into the LCD main message window.",
+      "textPreview": "Numbers display correctly through MeterLcd::Print(), which writes packed byte patterns into the LCD main message window.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "color": "#5F6872",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 5,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Numbers display correctly"
+          },
+          {
+            "index": 2,
+            "text": "through MeterLcd::Print(),"
+          },
+          {
+            "index": 3,
+            "text": "which writes packed byte"
+          },
+          {
+            "index": 4,
+            "text": "patterns into the LCD main"
+          },
+          {
+            "index": 5,
+            "text": "message window."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Numbers display correctly through MeterLcd::Print(), which writes packed byte patterns into the LCD main message window.",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "color": "#5F6872",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Numbers display correctly through MeterLcd::Print(), which writes packed byte patterns into the LCD main message window.",
+              "fontSize": 22,
+              "color": "#5F6872",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

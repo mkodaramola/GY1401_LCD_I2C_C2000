@@ -1,0 +1,670 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/pdb88j",
+    "id": "pdb88j",
+    "slide": 9,
+    "layoutId": "b7b5fb79-2c85-42fa-a20a-33d36eea90c7",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "2fdd5624-6156-49e8-bdda-17eb6eda92ee",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFFFFF",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "b7b5fb79-2c85-42fa-a20a-33d36eea90c7",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "2fdd5624-6156-49e8-bdda-17eb6eda92ee",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "2fdd5624-6156-49e8-bdda-17eb6eda92ee",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6dwfmpwz",
+      "id": "1",
+      "bbox": [
+        56,
+        40,
+        500,
+        30
+      ],
+      "geometry": "rect",
+      "text": "GY0801 PROGRAMMING",
+      "textPreview": "GY0801 PROGRAMMING",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#5F6872",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "GY0801 PROGRAMMING"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "GY0801 PROGRAMMING",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#5F6872",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "GY0801 PROGRAMMING",
+              "fontSize": 15,
+              "color": "#5F6872",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tgnyx4fa",
+      "id": "2",
+      "bbox": [
+        56,
+        82,
+        1030,
+        88
+      ],
+      "geometry": "rect",
+      "text": "GY0801 uses shadow RAM and typed symbols",
+      "textPreview": "GY0801 uses shadow RAM and typed symbols",
+      "resolvedFontSize": 42,
+      "resolvedTextStyle": {
+        "fontSize": 42,
+        "typeface": "+mn-lt",
+        "color": "#101418",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "GY0801 uses shadow RAM and typed symbols"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "GY0801 uses shadow RAM and typed symbols",
+          "resolvedTextStyle": {
+            "fontSize": 42,
+            "color": "#101418",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "GY0801 uses shadow RAM and typed symbols",
+              "fontSize": 42,
+              "color": "#101418",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/sfexozep",
+      "id": "3",
+      "bbox": [
+        56,
+        178,
+        1168,
+        2
+      ],
+      "geometry": "rect",
+      "fillColor": "#C8CDD3",
+      "lineColor": "#C8CDD3",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/f2pgzexg",
+      "id": "4",
+      "bbox": [
+        56,
+        216,
+        720,
+        76
+      ],
+      "geometry": "rect",
+      "text": "The driver stores a 32-address shadow RAM, updates bits locally, and flushes nibbles to the controller in burst writes.",
+      "textPreview": "The driver stores a 32-address shadow RAM, updates bits locally, and flushes nibbles to the controller in burst writes.",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "color": "#5F6872",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The driver stores a 32-address shadow RAM, updates bits locally, and"
+          },
+          {
+            "index": 2,
+            "text": "flushes nibbles to the controller in burst writes."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The driver stores a 32-address shadow RAM, updates bits locally, and flushes nibbles to the controller in burst writes.",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#5F6872",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "The driver stores a 32-address shadow RAM, updates bits locally, and flushes nibbles to the controller in burst writes.",
+              "fontSize": 24,
+              "color": "#5F6872",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/jql03ut0",
+      "id": "5",
+      "bbox": [
+        780,
+        208,
+        390,
+        330
+      ],
+      "alt": "GY0801 truth table crop",
+      "contentType": "image/png",
+      "imageFit": "contain",
+      "asset": {
+        "assetId": "638de950-7544-44c9-b2a4-8d057e34ecc6",
+        "contentType": "image/png",
+        "byteLength": 169104
+      }
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/147y14vm",
+      "id": "6",
+      "bbox": [
+        56,
+        356,
+        44,
+        28
+      ],
+      "geometry": "rect",
+      "text": "01",
+      "textPreview": "01",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#1E88E5",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "01"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "01",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#1E88E5",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "01",
+              "fontSize": 16,
+              "color": "#1E88E5",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/g3yxsze1",
+      "id": "7",
+      "bbox": [
+        114,
+        354,
+        622,
+        34
+      ],
+      "geometry": "rect",
+      "text": "writeText() and writeNumber() handle digit rendering.",
+      "textPreview": "writeText() and writeNumber() handle digit rendering.",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "fontSize": 23,
+        "typeface": "+mn-lt",
+        "color": "#101418",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "writeText() and writeNumber() handle digit rendering."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "writeText() and writeNumber() handle digit rendering.",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "color": "#101418",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "writeText() and writeNumber() handle digit rendering.",
+              "fontSize": 23,
+              "color": "#101418",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/36pg3edc",
+      "id": "8",
+      "bbox": [
+        56,
+        406,
+        44,
+        28
+      ],
+      "geometry": "rect",
+      "text": "02",
+      "textPreview": "02",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#1E88E5",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "02"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "02",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#1E88E5",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "02",
+              "fontSize": 16,
+              "color": "#1E88E5",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/25gfu9w7",
+      "id": "9",
+      "bbox": [
+        114,
+        404,
+        622,
+        34
+      ],
+      "geometry": "rect",
+      "text": "setIcon() groups several low-level symbols into one display intent.",
+      "textPreview": "setIcon() groups several low-level symbols into one display intent.",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "fontSize": 23,
+        "typeface": "+mn-lt",
+        "color": "#101418",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "setIcon() groups several low-level symbols into one display"
+          },
+          {
+            "index": 2,
+            "text": "intent."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "setIcon() groups several low-level symbols into one display intent.",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "color": "#101418",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "setIcon() groups several low-level symbols into one display intent.",
+              "fontSize": 23,
+              "color": "#101418",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gvahgnu1",
+      "id": "10",
+      "bbox": [
+        56,
+        456,
+        44,
+        28
+      ],
+      "geometry": "rect",
+      "text": "03",
+      "textPreview": "03",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#1E88E5",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "03"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "03",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#1E88E5",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "03",
+              "fontSize": 16,
+              "color": "#1E88E5",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hgji9sbm",
+      "id": "11",
+      "bbox": [
+        114,
+        454,
+        622,
+        34
+      ],
+      "geometry": "rect",
+      "text": "setSymbol() and setRawSegment() support bring-up and mapping tests.",
+      "textPreview": "setSymbol() and setRawSegment() support bring-up and mapping tests.",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "fontSize": 23,
+        "typeface": "+mn-lt",
+        "color": "#101418",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "setSymbol() and setRawSegment() support bring-up and"
+          },
+          {
+            "index": 2,
+            "text": "mapping tests."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "setSymbol() and setRawSegment() support bring-up and mapping tests.",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "color": "#101418",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "setSymbol() and setRawSegment() support bring-up and mapping tests.",
+              "fontSize": 23,
+              "color": "#101418",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

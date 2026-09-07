@@ -1,7 +1,7 @@
 ******************************************************************************
              TMS320C2000 Linker PC v22.6.2                     
 ******************************************************************************
->> Linked Thu Jul 23 13:08:06 2026
+>> Linked Fri Sep  4 15:17:59 2026
 
 OUTPUT FILE NAME:   <LCD_I2C.out>
 ENTRY POINT SYMBOL: "code_start"  address: 00000000
@@ -16,7 +16,7 @@ PAGE 0:
   RAMM0                 000000f6   0000030a  00000020  000002ea  RWIX
   RAMLS0                00008000   00000800  00000800  00000000  RWIX
   RAMLS1                00008800   00000800  00000800  00000000  RWIX
-  RAMLS2                00009000   00000800  00000025  000007db  RWIX
+  RAMLS2                00009000   00000800  000000a5  0000075b  RWIX
   RAMLS3                00009800   00000800  00000000  00000800  RWIX
   RAMLS4                0000a000   00000800  00000000  00000800  RWIX
   FLASH_BANK0_SEC0      00080000   00001000  00000000  00001000  RWIX
@@ -56,7 +56,7 @@ PAGE 0:
 PAGE 1:
   BOOT_RSVD             00000002   000000f1  00000000  000000f1  RWIX
   RAMM1                 00000400   000003f8  000003f8  00000000  RWIX
-  RAMLS5                0000a800   00000800  00000358  000004a8  RWIX
+  RAMLS5                0000a800   00000800  0000034f  000004b1  RWIX
   RAMLS6                0000b000   00000800  00000000  00000800  RWIX
   RAMLS7                0000b800   00000800  00000000  00000800  RWIX
   RAMGS0                0000c000   00002000  00000000  00002000  RWIX
@@ -89,16 +89,16 @@ codestart
 .stack     1    00000400    000003f8     UNINITIALIZED
                   00000400    000003f8     --HOLE--
 
-.bss       1    0000aa30    0000011e     UNINITIALIZED
-                  0000aa30    00000080     meter_lcd.obj (.bss:_ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c9kDigitMapE)
-                  0000aab0    0000006e     meter_lcd.obj (.bss:_ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c16kGlassSegmentMapE)
-                  0000ab1e    00000030     meter_lcd.obj (.bss:_ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c11gDisplayRamE)
+.bss       1    0000aa27    0000011e     UNINITIALIZED
+                  0000aa27    00000080     meter_lcd.obj (.bss:_ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c9kDigitMapE)
+                  0000aaa7    0000006e     meter_lcd.obj (.bss:_ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c16kGlassSegmentMapE)
+                  0000ab15    00000030     meter_lcd.obj (.bss:_ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c11gDisplayRamE)
 
 .init_array 
 *          0    000000fa    00000002     
                   000000fa    00000002     meter_lcd.obj (.init_array)
 
-.const     1    0000a800    00000230     
+.const     1    0000a800    00000227     
                   0000a800    0000009a     driverlib_eabi.lib : sysctl.obj (.const:.string)
                   0000a89a    00000098                        : gpio.obj (.const:.string)
                   0000a932    00000059     device.obj (.const:.string)
@@ -107,136 +107,138 @@ codestart
                   0000a9d7    00000001     --HOLE-- [fill = 0]
                   0000a9d8    00000043     hw_i2c.obj (.const:.string)
                   0000aa1b    0000000a     meter_lcd.obj (.const:_ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c13kEncodedDigitE)
-                  0000aa25    00000001     --HOLE-- [fill = 0]
-                  0000aa26    00000008     main.obj (.const:.string)
-                  0000aa2e    00000002     meter_lcd.obj (.const)
+                  0000aa25    00000002     meter_lcd.obj (.const)
 
-.data      1    0000ab4e    0000000a     UNINITIALIZED
-                  0000ab4e    00000006     rts2800_fpu32_eabi.lib : exit.c.obj (.data)
-                  0000ab54    00000002                            : _lock.c.obj (.data:_lock)
-                  0000ab56    00000002                            : _lock.c.obj (.data:_unlock)
+.data      1    0000ab46    0000000a     UNINITIALIZED
+                  0000ab46    00000006     rts2800_fpu32_eabi.lib : exit.c.obj (.data)
+                  0000ab4c    00000002                            : _lock.c.obj (.data:_lock)
+                  0000ab4e    00000002                            : _lock.c.obj (.data:_unlock)
 
 .text.1    0    00008000    00000800     
                   00008000    0000016e     meter_lcd.obj (.text:__sti___13_meter_lcd_cpp_4b68d83c)
                   0000816e    000000e0     device.obj (.text:Device_enableAllPeripherals)
                   0000824e    000000c8     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_setClock)
                   00008316    000000bd                        : sysctl.obj (.text:SysCtl_isPLLValid)
-                  000083d3    00000092     meter_lcd.obj (.text:_ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c16EncodeMainNumberEPKcPj)
-                  00008465    0000008b     hw_i2c.obj (.text:_ZN5HwI2C5WriteEjPKjj)
-                  000084f0    00000073     driverlib_eabi.lib : sysctl.obj (.text:DCC_setCounterSeeds)
-                  00008563    00000064                        : i2c.obj (.text:I2C_initController)
-                  000085c7    0000005e                        : sysctl.obj (.text:SysCtl_getClock)
-                  00008625    00000052                        : gpio.obj (.text:GPIO_setPadConfig)
-                  00008677    00000051     device.obj (.text:Device_init)
-                  000086c8    0000004e     hw_i2c.obj (.text:_ZN5HwI2C4InitEv)
-                  00008716    0000004d     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_selectOscSource)
-                  00008763    00000047     meter_lcd.obj (.text:_ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c14DigitFromSheetEj)
-                  000087aa    00000045     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_pollX1Counter)
-                  000087ef    00000010                        : sysctl.obj (.text:DCC_isBaseValid)
-                  000087ff    00000001     c2000ware_libraries.obj (.text:C2000Ware_libraries_init)
+                  000083d3    0000008b     hw_i2c.obj (.text:_ZN5HwI2C5WriteEjPKjj)
+                  0000845e    00000089     meter_lcd.obj (.text:_ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c14EncodeMainTextEPKcPj)
+                  000084e7    00000073     driverlib_eabi.lib : sysctl.obj (.text:DCC_setCounterSeeds)
+                  0000855a    00000064                        : i2c.obj (.text:I2C_initController)
+                  000085be    0000005e                        : sysctl.obj (.text:SysCtl_getClock)
+                  0000861c    00000052                        : gpio.obj (.text:GPIO_setPadConfig)
+                  0000866e    00000051     device.obj (.text:Device_init)
+                  000086bf    0000004e     hw_i2c.obj (.text:_ZN5HwI2C4InitEv)
+                  0000870d    0000004d     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_selectOscSource)
+                  0000875a    00000047     meter_lcd.obj (.text:_ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c14DigitFromSheetEj)
+                  000087a1    00000045     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_pollX1Counter)
+                  000087e6    0000001a                        : sysctl.obj (.text:SysCtl_getLowSpeedClock)
 
 .text.2    0    00008800    00000800     
                   00008800    00000040     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_selectXTAL)
                   00008840    0000003d                        : interrupt.obj (.text:Interrupt_initModule)
                   0000887d    0000003a                        : gpio.obj (.text:GPIO_setAnalogMode)
-                  000088b7    00000038     rts2800_fpu32_eabi.lib : autoinit.c.obj (.text:__TI_auto_init_nobinit)
-                  000088ef    00000037     driverlib_eabi.lib : gpio.obj (.text:GPIO_setPinConfig)
-                  00008926    00000037                        : gpio.obj (.text:GPIO_setQualificationMode)
-                  0000895d    00000032     meter_lcd.obj (.text:_ZN8MeterLcd8WriteRamEjPKjj)
-                  0000898f    00000031     driverlib_eabi.lib : gpio.obj (.text:GPIO_setDirectionMode)
-                  000089c0    0000002e     rts2800_fpu32_eabi.lib : copy_decompress_lzss.c.obj (.text:decompress:lzss)
-                  000089ee    00000029     hw_i2c.obj (.text:_ZN34_GLOBAL__N__10_hw_i2c_cpp_842102a918WaitForTxFifoEmptyEv)
-                  00008a17    00000029     rts2800_fpu32_eabi.lib : exit.c.obj (.text)
-                  00008a40    00000026     hw_i2c.obj (.text:_Z25I2C_setFIFOInterruptLevelm15I2C_TxFIFOLevel15I2C_RxFIFOLevel)
-                  00008a66    00000025     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_selectXTALSingleEnded)
-                  00008a8b    00000025     meter_lcd.obj (.text:_ZN8MeterLcd9SetRamBitEjjb)
-                  00008ab0    00000024     driverlib_eabi.lib : sysctl.obj (.text:DCC_enableSingleShotMode)
-                  00008ad4    00000023     meter_lcd.obj (.text:_ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c16SegmentFromSheetEjN8MeterLcd3ComE)
-                  00008af7    00000022     meter_lcd.obj (.text:_ZN8MeterLcd4InitEv)
-                  00008b19    00000021     meter_lcd.obj (.text:_ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c12WriteRamPageEjPKjj)
-                  00008b3a    00000020     meter_lcd.obj (.text:_ZN8MeterLcd15SetGlassSegmentENS_12GlassSegmentEb)
-                  00008b5a    0000001f     meter_lcd.obj (.text:_ZN8MeterLcd5PrintEPKc)
-                  00008b79    0000001e     driverlib_eabi.lib : sysctl.obj (.text:DCC_setCounter1ClkSource)
-                  00008b97    0000001e                        : interrupt.obj (.text:Interrupt_initVectorTable)
-                  00008bb5    0000001d     rts2800_fpu32_eabi.lib : memcpy.c.obj (.text)
-                  00008bd2    0000001c     driverlib_eabi.lib : sysctl.obj (.text:DCC_setCounter0ClkSource)
-                  00008bee    0000001b     hw_i2c.obj (.text:_Z20I2C_setTargetAddressmj)
-                  00008c09    0000001b     main.obj (.text:main)
-                  00008c24    0000001a     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_getLowSpeedClock)
-                  00008c3e    0000001a     hw_i2c.obj (.text:_Z13I2C_setConfigmj)
-                  00008c58    0000001a     hw_i2c.obj (.text:_Z18I2C_setAddressModem15I2C_AddressMode)
-                  00008c72    0000001a     hw_i2c.obj (.text:_Z20I2C_setEmulationModem17I2C_EmulationMode)
-                  00008c8c    00000019     hw_i2c.obj (.text:_Z13I2C_isBusBusym)
-                  00008ca5    00000018     hw_i2c.obj (.text:_Z14I2C_enableFIFOm)
-                  00008cbd    00000018     hw_i2c.obj (.text:_Z15I2C_disableFIFOm)
-                  00008cd5    00000017     device.obj (.text:SysCtl_enablePeripheral)
-                  00008cec    00000017     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_enablePeripheral)
-                  00008d03    00000017     hw_i2c.obj (.text:_ZN34_GLOBAL__N__10_hw_i2c_cpp_842102a911WaitForStopEv)
-                  00008d1a    00000017     hw_i2c.obj (.text:_ZN34_GLOBAL__N__10_hw_i2c_cpp_842102a914WaitForBusFreeEv)
-                  00008d31    00000017     rts2800_fpu32_eabi.lib : boot28.asm.obj (.text)
-                  00008d48    00000016     driverlib_eabi.lib : sysctl.obj (.text:DCC_disableDoneSignal)
-                  00008d5e    00000016                        : sysctl.obj (.text:DCC_enableDoneSignal)
-                  00008d74    00000016                        : interrupt.obj (.text:Interrupt_defaultHandler)
-                  00008d8a    00000016     hw_i2c.obj (.text:_Z19I2C_getTxFIFOStatusm)
-                  00008da0    00000016     hw_i2c.obj (.text:_Z26I2C_getStopConditionStatusm)
-                  00008db6    00000015     driverlib_eabi.lib : sysctl.obj (.text:DCC_clearDoneFlag)
-                  00008dcb    00000015                        : sysctl.obj (.text:DCC_clearErrorFlag)
-                  00008de0    00000015                        : sysctl.obj (.text:DCC_disableErrorSignal)
-                  00008df5    00000015                        : sysctl.obj (.text:DCC_enableErrorSignal)
-                  00008e0a    00000015     device.obj (.text:GPIO_unlockPortConfig)
-                  00008e1f    00000014     driverlib_eabi.lib : sysctl.obj (.text:DCC_disableModule)
-                  00008e33    00000014                        : sysctl.obj (.text:DCC_enableModule)
-                  00008e47    00000014                        : gpio.obj (.text:GPIO_isPinValid)
-                  00008e5b    00000014     device.obj (.text:SysCtl_deviceCal)
-                  00008e6f    00000014     hw_i2c.obj (.text:_Z11I2C_putDatamj)
-                  00008e83    00000014     meter_lcd.obj (.text:_ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c11SendCommandEj)
-                  00008e97    00000014     meter_lcd.obj (.text:_ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c9MakeIcsetEjb)
-                  00008eab    00000013     hw_i2c.obj (.text:_Z16I2C_enableModulem)
-                  00008ebe    00000013     hw_i2c.obj (.text:_Z17I2C_disableModulem)
-                  00008ed1    00000013     hw_i2c.obj (.text:_Z21I2C_sendStopConditionm)
-                  00008ee4    00000013     hw_i2c.obj (.text:_Z22I2C_sendStartConditionm)
-                  00008ef7    00000012     hw_i2c.obj (.text:_Z15I2C_clearStatusmj)
-                  00008f09    00000012     hw_i2c.obj (.text:_Z16I2C_setDataCountmj)
-                  00008f1b    00000010     device.obj (.text:Device_initGPIO)
-                  00008f2b    00000010     hw_i2c.obj (.text:_Z13I2C_getStatusm)
-                  00008f3b    0000000f     device.obj (.text:ASysCtl_disableDCDC)
-                  00008f4a    0000000f     driverlib_eabi.lib : i2c.obj (.text:I2C_isBaseValid)
-                  00008f59    0000000d                        : interrupt.obj (.text:Interrupt_disableGlobal)
-                  00008f66    0000000d     device.obj (.text:SysCtl_setLowSpeedClock)
-                  00008f73    0000000d     rts2800_fpu32_eabi.lib : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset)
-                  00008f80    0000000c                            : args_main.c.obj (.text)
-                  00008f8c    0000000b     device.obj (.text:SysCtl_disableWatchdog)
-                  00008f97    0000000b     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_isMCDClockFailureDetected)
-                  00008fa2    0000000b     hw_i2c.obj (.text:_Z15I2C_isBaseValidm)
-                  00008fad    0000000b     meter_lcd.obj (.text:_ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c15IsValidLocationERKNS_15SegmentLocationE)
-                  00008fb8    0000000b     meter_lcd.obj (.text:_ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c20IsMappedSegmentLabelEj)
-                  00008fc3    0000000a     driverlib_eabi.lib : interrupt.obj (.text:Interrupt_illegalOperationHandler)
-                  00008fcd    0000000a                        : interrupt.obj (.text:Interrupt_nmiHandler)
-                  00008fd7    00000009     rts2800_fpu32_eabi.lib : _lock.c.obj (.text)
-                  00008fe0    00000008                            : copy_decompress_none.c.obj (.text:decompress:none)
-                  00008fe8    00000008     f28004x_codestartbranch.obj (.text)
-                  00008ff0    00000007     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_resetMCD)
-                  00008ff7    00000007     meter_lcd.obj (.text:_ZN8MeterLcd5ClearEv)
-                  00008ffe    00000002     rts2800_fpu32_eabi.lib : pre_init.c.obj (.text)
+                  000088b7    0000003a     meter_lcd.obj (.text:_ZN8MeterLcd14PrintErrorCodeEj)
+                  000088f1    00000038     rts2800_fpu32_eabi.lib : autoinit.c.obj (.text:__TI_auto_init_nobinit)
+                  00008929    00000037     driverlib_eabi.lib : gpio.obj (.text:GPIO_setPinConfig)
+                  00008960    00000037                        : gpio.obj (.text:GPIO_setQualificationMode)
+                  00008997    00000032     meter_lcd.obj (.text:_ZN8MeterLcd8WriteRamEjPKjj)
+                  000089c9    00000031     driverlib_eabi.lib : gpio.obj (.text:GPIO_setDirectionMode)
+                  000089fa    00000030     meter_lcd.obj (.text:_ZN8MeterLcd9SetRamBitEjjb)
+                  00008a2a    0000002e     rts2800_fpu32_eabi.lib : copy_decompress_lzss.c.obj (.text:decompress:lzss)
+                  00008a58    00000029     hw_i2c.obj (.text:_ZN34_GLOBAL__N__10_hw_i2c_cpp_842102a918WaitForTxFifoEmptyEv)
+                  00008a81    00000029     rts2800_fpu32_eabi.lib : exit.c.obj (.text)
+                  00008aaa    00000027     meter_lcd.obj (.text:_ZN8MeterLcd10SetSegmentENS_3ComEjb)
+                  00008ad1    00000026     hw_i2c.obj (.text:_Z25I2C_setFIFOInterruptLevelm15I2C_TxFIFOLevel15I2C_RxFIFOLevel)
+                  00008af7    00000025     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_selectXTALSingleEnded)
+                  00008b1c    00000025     meter_lcd.obj (.text:_ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c15EncodedMainCharEcPj)
+                  00008b41    00000024     driverlib_eabi.lib : sysctl.obj (.text:DCC_enableSingleShotMode)
+                  00008b65    00000023     meter_lcd.obj (.text:_ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c16SegmentFromSheetEjN8MeterLcd3ComE)
+                  00008b88    00000022     meter_lcd.obj (.text:_ZN8MeterLcd4InitEv)
+                  00008baa    00000021     meter_lcd.obj (.text:_ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c12WriteRamPageEjPKjj)
+                  00008bcb    00000020     meter_lcd.obj (.text:_ZN8MeterLcd15SetGlassSegmentENS_12GlassSegmentEb)
+                  00008beb    0000001f     main.obj (.text:main)
+                  00008c0a    0000001e     driverlib_eabi.lib : sysctl.obj (.text:DCC_setCounter1ClkSource)
+                  00008c28    0000001e                        : interrupt.obj (.text:Interrupt_initVectorTable)
+                  00008c46    0000001d     rts2800_fpu32_eabi.lib : memcpy.c.obj (.text)
+                  00008c63    0000001c     driverlib_eabi.lib : sysctl.obj (.text:DCC_setCounter0ClkSource)
+                  00008c7f    0000001b     hw_i2c.obj (.text:_Z20I2C_setTargetAddressmj)
+                  00008c9a    0000001a     hw_i2c.obj (.text:_Z13I2C_setConfigmj)
+                  00008cb4    0000001a     hw_i2c.obj (.text:_Z18I2C_setAddressModem15I2C_AddressMode)
+                  00008cce    0000001a     hw_i2c.obj (.text:_Z20I2C_setEmulationModem17I2C_EmulationMode)
+                  00008ce8    00000019     hw_i2c.obj (.text:_Z13I2C_isBusBusym)
+                  00008d01    00000018     hw_i2c.obj (.text:_Z14I2C_enableFIFOm)
+                  00008d19    00000018     hw_i2c.obj (.text:_Z15I2C_disableFIFOm)
+                  00008d31    00000017     device.obj (.text:SysCtl_enablePeripheral)
+                  00008d48    00000017     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_enablePeripheral)
+                  00008d5f    00000017     hw_i2c.obj (.text:_ZN34_GLOBAL__N__10_hw_i2c_cpp_842102a911WaitForStopEv)
+                  00008d76    00000017     hw_i2c.obj (.text:_ZN34_GLOBAL__N__10_hw_i2c_cpp_842102a914WaitForBusFreeEv)
+                  00008d8d    00000017     rts2800_fpu32_eabi.lib : boot28.asm.obj (.text)
+                  00008da4    00000016     driverlib_eabi.lib : sysctl.obj (.text:DCC_disableDoneSignal)
+                  00008dba    00000016                        : sysctl.obj (.text:DCC_enableDoneSignal)
+                  00008dd0    00000016                        : interrupt.obj (.text:Interrupt_defaultHandler)
+                  00008de6    00000016     hw_i2c.obj (.text:_Z19I2C_getTxFIFOStatusm)
+                  00008dfc    00000016     hw_i2c.obj (.text:_Z26I2C_getStopConditionStatusm)
+                  00008e12    00000015     driverlib_eabi.lib : sysctl.obj (.text:DCC_clearDoneFlag)
+                  00008e27    00000015                        : sysctl.obj (.text:DCC_clearErrorFlag)
+                  00008e3c    00000015                        : sysctl.obj (.text:DCC_disableErrorSignal)
+                  00008e51    00000015                        : sysctl.obj (.text:DCC_enableErrorSignal)
+                  00008e66    00000015     device.obj (.text:GPIO_unlockPortConfig)
+                  00008e7b    00000014     driverlib_eabi.lib : sysctl.obj (.text:DCC_disableModule)
+                  00008e8f    00000014                        : sysctl.obj (.text:DCC_enableModule)
+                  00008ea3    00000014                        : gpio.obj (.text:GPIO_isPinValid)
+                  00008eb7    00000014     device.obj (.text:SysCtl_deviceCal)
+                  00008ecb    00000014     hw_i2c.obj (.text:_Z11I2C_putDatamj)
+                  00008edf    00000014     meter_lcd.obj (.text:_ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c11SendCommandEj)
+                  00008ef3    00000014     meter_lcd.obj (.text:_ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c9MakeIcsetEjb)
+                  00008f07    00000013     hw_i2c.obj (.text:_Z16I2C_enableModulem)
+                  00008f1a    00000013     hw_i2c.obj (.text:_Z17I2C_disableModulem)
+                  00008f2d    00000013     hw_i2c.obj (.text:_Z21I2C_sendStopConditionm)
+                  00008f40    00000013     hw_i2c.obj (.text:_Z22I2C_sendStartConditionm)
+                  00008f53    00000012     hw_i2c.obj (.text:_Z15I2C_clearStatusmj)
+                  00008f65    00000012     hw_i2c.obj (.text:_Z16I2C_setDataCountmj)
+                  00008f77    00000010     driverlib_eabi.lib : sysctl.obj (.text:DCC_isBaseValid)
+                  00008f87    00000010     device.obj (.text:Device_initGPIO)
+                  00008f97    00000010     hw_i2c.obj (.text:_Z13I2C_getStatusm)
+                  00008fa7    0000000f     device.obj (.text:ASysCtl_disableDCDC)
+                  00008fb6    0000000f     driverlib_eabi.lib : i2c.obj (.text:I2C_isBaseValid)
+                  00008fc5    0000000d                        : interrupt.obj (.text:Interrupt_disableGlobal)
+                  00008fd2    0000000d     device.obj (.text:SysCtl_setLowSpeedClock)
+                  00008fdf    0000000d     rts2800_fpu32_eabi.lib : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset)
+                  00008fec    0000000c                            : args_main.c.obj (.text)
+                  00008ff8    00000008     main.obj (.text:_Z14LCD_SetSegmentN8MeterLcd3ComEjb)
 
-.text.3    0    00009000    00000025     
-                  00009000    00000007     meter_lcd.obj (.text:_ZN8MeterLcd7RefreshEv)
-                  00009007    00000007     device.obj (.text:__error__)
-                  0000900e    00000006     meter_lcd.obj (.text:_ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c11MakeCommandEj)
-                  00009014    00000005     board.obj (.text:Board_init)
-                  00009019    00000005     main.obj (.text:_Z1Vv)
-                  0000901e    00000005     main.obj (.text:_Z1kv)
-                  00009023    00000001     board.obj (.text:PinMux_init)
-                  00009024    00000001     rts2800_fpu32_eabi.lib : startup.c.obj (.text)
+.text.3    0    00009000    000000a5     
+                  00009000    0000000b     device.obj (.text:SysCtl_disableWatchdog)
+                  0000900b    0000000b     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_isMCDClockFailureDetected)
+                  00009016    0000000b     hw_i2c.obj (.text:_Z15I2C_isBaseValidm)
+                  00009021    0000000b     meter_lcd.obj (.text:_ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c15IsValidLocationERKNS_15SegmentLocationE)
+                  0000902c    0000000b     meter_lcd.obj (.text:_ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c20IsMappedSegmentLabelEj)
+                  00009037    0000000b     rts2800_fpu32_eabi.lib : u_div28.asm.obj (.text)
+                  00009042    0000000a     driverlib_eabi.lib : interrupt.obj (.text:Interrupt_illegalOperationHandler)
+                  0000904c    0000000a                        : interrupt.obj (.text:Interrupt_nmiHandler)
+                  00009056    00000009     rts2800_fpu32_eabi.lib : _lock.c.obj (.text)
+                  0000905f    00000008                            : copy_decompress_none.c.obj (.text:decompress:none)
+                  00009067    00000008     f28004x_codestartbranch.obj (.text)
+                  0000906f    00000007     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_resetMCD)
+                  00009076    00000007     meter_lcd.obj (.text:_ZN8MeterLcd5ClearEv)
+                  0000907d    00000007     meter_lcd.obj (.text:_ZN8MeterLcd7RefreshEv)
+                  00009084    00000007     device.obj (.text:__error__)
+                  0000908b    00000006     meter_lcd.obj (.text:_ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c11MakeCommandEj)
+                  00009091    00000005     board.obj (.text:Board_init)
+                  00009096    00000005     main.obj (.text:_Z1Vv)
+                  0000909b    00000005     main.obj (.text:_Z1kv)
+                  000090a0    00000002     rts2800_fpu32_eabi.lib : pre_init.c.obj (.text)
+                  000090a2    00000001     c2000ware_libraries.obj (.text:C2000Ware_libraries_init)
+                  000090a3    00000001     board.obj (.text:PinMux_init)
+                  000090a4    00000001     rts2800_fpu32_eabi.lib : startup.c.obj (.text)
 
 MODULE SUMMARY
 
        Module                        code   ro data   rw data
        ------                        ----   -------   -------
     .\app\
-       main.obj                      37     8         0      
+       main.obj                      49     0         0      
     +--+-----------------------------+------+---------+---------+
-       Total:                        37     8         0      
+       Total:                        49     0         0      
                                                              
     .\device\
        device.obj                    431    89        0      
@@ -245,10 +247,10 @@ MODULE SUMMARY
        Total:                        441    89        0      
                                                              
     .\hw\
-       meter_lcd.obj                 917    14        286    
+       meter_lcd.obj                 1022   14        286    
        hw_i2c.obj                    723    67        0      
     +--+-----------------------------+------+---------+---------+
-       Total:                        1640   81        286    
+       Total:                        1745   81        286    
                                                              
     .\syscfg\
        board.obj                     6      0         0      
@@ -273,23 +275,24 @@ MODULE SUMMARY
        _lock.c.obj                   9      0         4      
        copy_zero_init.c.obj          13     0         0      
        args_main.c.obj               12     0         0      
+       u_div28.asm.obj               11     0         0      
        copy_decompress_none.c.obj    8      0         0      
        pre_init.c.obj                2      0         0      
        startup.c.obj                 1      0         0      
     +--+-----------------------------+------+---------+---------+
-       Total:                        240    0         10     
+       Total:                        251    0         10     
                                                              
        Stack:                        0      0         1016   
        Linker Generated:             0      26        0      
     +--+-----------------------------+------+---------+---------+
-       Grand Total:                  4139   585       1312   
+       Grand Total:                  4267   577       1312   
 
 
 LINKER GENERATED COPY TABLES
 
 __TI_cinit_table @ 0000010e records: 2, size/record: 4, table size: 8
-	.data: load addr=000000fc, load size=00000008 bytes, run addr=0000ab4e, run size=0000000a bytes, compression=lzss
-	.bss: load addr=0000010a, load size=00000004 bytes, run addr=0000aa30, run size=0000011e bytes, compression=zero_init
+	.data: load addr=000000fc, load size=00000008 bytes, run addr=0000ab46, run size=0000000a bytes, compression=lzss
+	.bss: load addr=0000010a, load size=00000004 bytes, run addr=0000aa27, run size=0000011e bytes, compression=zero_init
 
 
 LINKER GENERATED HANDLER TABLE
@@ -306,69 +309,72 @@ address     data page           name
 --------    ----------------    ----
 00000400      10 (00000400)     __stack
 
-0000ab1e     2ac (0000ab00)     _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c11gDisplayRamE
+0000ab15     2ac (0000ab00)     _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c11gDisplayRamE
 
-0000ab4e     2ad (0000ab40)     __TI_enable_exit_profile_output
-0000ab50     2ad (0000ab40)     __TI_cleanup_ptr
-0000ab52     2ad (0000ab40)     __TI_dtors_ptr
-0000ab54     2ad (0000ab40)     _lock
-0000ab56     2ad (0000ab40)     _unlock
+0000ab46     2ad (0000ab40)     __TI_enable_exit_profile_output
+0000ab48     2ad (0000ab40)     __TI_cleanup_ptr
+0000ab4a     2ad (0000ab40)     __TI_dtors_ptr
+0000ab4c     2ad (0000ab40)     _lock
+0000ab4e     2ad (0000ab40)     _unlock
 
 
 GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
 
 page  address   name                                                                               
 ----  -------   ----                                                                               
-0     00009014  Board_init                                                                         
-0     00008a17  C$$EXIT                                                                            
-0     000087ff  C2000Ware_libraries_init                                                           
+0     00009091  Board_init                                                                         
+0     00008a81  C$$EXIT                                                                            
+0     000090a2  C2000Ware_libraries_init                                                           
 0     0000816e  Device_enableAllPeripherals                                                        
-0     00008677  Device_init                                                                        
-0     00008f1b  Device_initGPIO                                                                    
+0     0000866e  Device_init                                                                        
+0     00008f87  Device_initGPIO                                                                    
 0     0000887d  GPIO_setAnalogMode                                                                 
-0     0000898f  GPIO_setDirectionMode                                                              
-0     00008625  GPIO_setPadConfig                                                                  
-0     000088ef  GPIO_setPinConfig                                                                  
-0     00008926  GPIO_setQualificationMode                                                          
-0     00008563  I2C_initController                                                                 
-0     00008d74  Interrupt_defaultHandler                                                           
-0     00008fc3  Interrupt_illegalOperationHandler                                                  
+0     000089c9  GPIO_setDirectionMode                                                              
+0     0000861c  GPIO_setPadConfig                                                                  
+0     00008929  GPIO_setPinConfig                                                                  
+0     00008960  GPIO_setQualificationMode                                                          
+0     0000855a  I2C_initController                                                                 
+0     00008dd0  Interrupt_defaultHandler                                                           
+0     00009042  Interrupt_illegalOperationHandler                                                  
 0     00008840  Interrupt_initModule                                                               
-0     00008b97  Interrupt_initVectorTable                                                          
-0     00008fcd  Interrupt_nmiHandler                                                               
-0     00009023  PinMux_init                                                                        
+0     00008c28  Interrupt_initVectorTable                                                          
+0     0000904c  Interrupt_nmiHandler                                                               
+0     000090a3  PinMux_init                                                                        
 0     000000f6  SysCtl_delay                                                                       
-0     000085c7  SysCtl_getClock                                                                    
-0     00008c24  SysCtl_getLowSpeedClock                                                            
+0     000085be  SysCtl_getClock                                                                    
+0     000087e6  SysCtl_getLowSpeedClock                                                            
 0     00008316  SysCtl_isPLLValid                                                                  
-0     00008716  SysCtl_selectOscSource                                                             
+0     0000870d  SysCtl_selectOscSource                                                             
 0     00008800  SysCtl_selectXTAL                                                                  
-0     00008a66  SysCtl_selectXTALSingleEnded                                                       
+0     00008af7  SysCtl_selectXTALSingleEnded                                                       
 0     0000824e  SysCtl_setClock                                                                    
-0     00009019  _Z1Vv                                                                              
-0     0000901e  _Z1kv                                                                              
-0     00008d03  _ZN34_GLOBAL__N__10_hw_i2c_cpp_842102a911WaitForStopEv                             
-0     00008d1a  _ZN34_GLOBAL__N__10_hw_i2c_cpp_842102a914WaitForBusFreeEv                          
-0     000089ee  _ZN34_GLOBAL__N__10_hw_i2c_cpp_842102a918WaitForTxFifoEmptyEv                      
-0     0000900e  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c11MakeCommandEj                          
-0     00008e83  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c11SendCommandEj                          
-1     0000ab1e  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c11gDisplayRamE                           
-0     00008b19  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c12WriteRamPageEjPKjj                     
-0     00008763  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c14DigitFromSheetEj                       
-0     00008fad  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c15IsValidLocationERKNS_15SegmentLocationE
-0     000083d3  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c16EncodeMainNumberEPKcPj                 
-0     00008ad4  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c16SegmentFromSheetEjN8MeterLcd3ComE      
-0     00008fb8  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c20IsMappedSegmentLabelEj                 
-0     00008e97  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c9MakeIcsetEjb                            
-0     000086c8  _ZN5HwI2C4InitEv                                                                   
-0     00008465  _ZN5HwI2C5WriteEjPKjj                                                              
-0     00008b3a  _ZN8MeterLcd15SetGlassSegmentENS_12GlassSegmentEb                                  
-0     00008af7  _ZN8MeterLcd4InitEv                                                                
-0     00008ff7  _ZN8MeterLcd5ClearEv                                                               
-0     00008b5a  _ZN8MeterLcd5PrintEPKc                                                             
-0     00009000  _ZN8MeterLcd7RefreshEv                                                             
-0     0000895d  _ZN8MeterLcd8WriteRamEjPKjj                                                        
-0     00008a8b  _ZN8MeterLcd9SetRamBitEjjb                                                         
+0     00008ff8  _Z14LCD_SetSegmentN8MeterLcd3ComEjb                                                
+0     00009096  _Z1Vv                                                                              
+0     0000909b  _Z1kv                                                                              
+0     00008d5f  _ZN34_GLOBAL__N__10_hw_i2c_cpp_842102a911WaitForStopEv                             
+0     00008d76  _ZN34_GLOBAL__N__10_hw_i2c_cpp_842102a914WaitForBusFreeEv                          
+0     00008a58  _ZN34_GLOBAL__N__10_hw_i2c_cpp_842102a918WaitForTxFifoEmptyEv                      
+0     0000908b  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c11MakeCommandEj                          
+0     00008edf  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c11SendCommandEj                          
+1     0000ab15  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c11gDisplayRamE                           
+0     00008baa  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c12WriteRamPageEjPKjj                     
+0     0000875a  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c14DigitFromSheetEj                       
+0     0000845e  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c14EncodeMainTextEPKcPj                   
+0     00008b1c  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c15EncodedMainCharEcPj                    
+0     00009021  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c15IsValidLocationERKNS_15SegmentLocationE
+0     00008b65  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c16SegmentFromSheetEjN8MeterLcd3ComE      
+0     0000902c  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c20IsMappedSegmentLabelEj                 
+0     00008ef3  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c9MakeIcsetEjb                            
+0     000086bf  _ZN5HwI2C4InitEv                                                                   
+0     000083d3  _ZN5HwI2C5WriteEjPKjj                                                              
+0     00008aaa  _ZN8MeterLcd10SetSegmentENS_3ComEjb                                                
+0     000088b7  _ZN8MeterLcd14PrintErrorCodeEj                                                     
+0     00008bcb  _ZN8MeterLcd15SetGlassSegmentENS_12GlassSegmentEb                                  
+0     00008b88  _ZN8MeterLcd4InitEv                                                                
+0     00009076  _ZN8MeterLcd5ClearEv                                                               
+0     0000907d  _ZN8MeterLcd7RefreshEv                                                             
+0     00008997  _ZN8MeterLcd8WriteRamEjPKjj                                                        
+0     000089fa  _ZN8MeterLcd9SetRamBitEjjb                                                         
 0     0000010e  __TI_CINIT_Base                                                                    
 0     00000116  __TI_CINIT_Limit                                                                   
 0     00000116  __TI_CINIT_Warm                                                                    
@@ -378,34 +384,36 @@ page  address   name
 0     000000fc  __TI_INITARRAY_Limit                                                               
 1     000007f8  __TI_STACK_END                                                                     
 abs   000003f8  __TI_STACK_SIZE                                                                    
-0     000088b7  __TI_auto_init_nobinit                                                             
-1     0000ab50  __TI_cleanup_ptr                                                                   
-0     000089c0  __TI_decompress_lzss                                                               
-0     00008fe0  __TI_decompress_none                                                               
-1     0000ab52  __TI_dtors_ptr                                                                     
-1     0000ab4e  __TI_enable_exit_profile_output                                                    
+0     000088f1  __TI_auto_init_nobinit                                                             
+1     0000ab48  __TI_cleanup_ptr                                                                   
+0     00008a2a  __TI_decompress_lzss                                                               
+0     0000905f  __TI_decompress_none                                                               
+1     0000ab4a  __TI_dtors_ptr                                                                     
+1     0000ab46  __TI_enable_exit_profile_output                                                    
 abs   ffffffff  __TI_pprof_out_hndl                                                                
 abs   ffffffff  __TI_prof_data_size                                                                
 abs   ffffffff  __TI_prof_data_start                                                               
-0     00008f73  __TI_zero_init_nomemset                                                            
+0     00008fdf  __TI_zero_init_nomemset                                                            
+0     00009037  __c28xabi_divu                                                                     
+0     0000903c  __c28xabi_modu                                                                     
 n/a   UNDEFED   __c_args__                                                                         
-0     00009007  __error__                                                                          
+0     00009084  __error__                                                                          
 1     00000400  __stack                                                                            
 0     00008000  __sti___13_meter_lcd_cpp_4b68d83c                                                  
-0     00008f80  _args_main                                                                         
-0     00008d31  _c_int00                                                                           
-1     0000ab54  _lock                                                                              
-0     00008fdf  _nop                                                                               
-0     00008fdb  _register_lock                                                                     
-0     00008fd7  _register_unlock                                                                   
-0     00009024  _system_post_cinit                                                                 
-0     00008ffe  _system_pre_init                                                                   
-1     0000ab56  _unlock                                                                            
-0     00008a17  abort                                                                              
+0     00008fec  _args_main                                                                         
+0     00008d8d  _c_int00                                                                           
+1     0000ab4c  _lock                                                                              
+0     0000905e  _nop                                                                               
+0     0000905a  _register_lock                                                                     
+0     00009056  _register_unlock                                                                   
+0     000090a4  _system_post_cinit                                                                 
+0     000090a0  _system_pre_init                                                                   
+1     0000ab4e  _unlock                                                                            
+0     00008a81  abort                                                                              
 0     00000000  code_start                                                                         
-0     00008a19  exit                                                                               
-0     00008c09  main                                                                               
-0     00008bb5  memcpy                                                                             
+0     00008a83  exit                                                                               
+0     00008beb  main                                                                               
+0     00008c46  memcpy                                                                             
 
 
 GLOBAL SYMBOLS: SORTED BY Symbol Address 
@@ -425,79 +433,84 @@ page  address   name
 0     0000816e  Device_enableAllPeripherals                                                        
 0     0000824e  SysCtl_setClock                                                                    
 0     00008316  SysCtl_isPLLValid                                                                  
-0     000083d3  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c16EncodeMainNumberEPKcPj                 
-0     00008465  _ZN5HwI2C5WriteEjPKjj                                                              
-0     00008563  I2C_initController                                                                 
-0     000085c7  SysCtl_getClock                                                                    
-0     00008625  GPIO_setPadConfig                                                                  
-0     00008677  Device_init                                                                        
-0     000086c8  _ZN5HwI2C4InitEv                                                                   
-0     00008716  SysCtl_selectOscSource                                                             
-0     00008763  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c14DigitFromSheetEj                       
-0     000087ff  C2000Ware_libraries_init                                                           
+0     000083d3  _ZN5HwI2C5WriteEjPKjj                                                              
+0     0000845e  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c14EncodeMainTextEPKcPj                   
+0     0000855a  I2C_initController                                                                 
+0     000085be  SysCtl_getClock                                                                    
+0     0000861c  GPIO_setPadConfig                                                                  
+0     0000866e  Device_init                                                                        
+0     000086bf  _ZN5HwI2C4InitEv                                                                   
+0     0000870d  SysCtl_selectOscSource                                                             
+0     0000875a  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c14DigitFromSheetEj                       
+0     000087e6  SysCtl_getLowSpeedClock                                                            
 0     00008800  SysCtl_selectXTAL                                                                  
 0     00008840  Interrupt_initModule                                                               
 0     0000887d  GPIO_setAnalogMode                                                                 
-0     000088b7  __TI_auto_init_nobinit                                                             
-0     000088ef  GPIO_setPinConfig                                                                  
-0     00008926  GPIO_setQualificationMode                                                          
-0     0000895d  _ZN8MeterLcd8WriteRamEjPKjj                                                        
-0     0000898f  GPIO_setDirectionMode                                                              
-0     000089c0  __TI_decompress_lzss                                                               
-0     000089ee  _ZN34_GLOBAL__N__10_hw_i2c_cpp_842102a918WaitForTxFifoEmptyEv                      
-0     00008a17  C$$EXIT                                                                            
-0     00008a17  abort                                                                              
-0     00008a19  exit                                                                               
-0     00008a66  SysCtl_selectXTALSingleEnded                                                       
-0     00008a8b  _ZN8MeterLcd9SetRamBitEjjb                                                         
-0     00008ad4  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c16SegmentFromSheetEjN8MeterLcd3ComE      
-0     00008af7  _ZN8MeterLcd4InitEv                                                                
-0     00008b19  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c12WriteRamPageEjPKjj                     
-0     00008b3a  _ZN8MeterLcd15SetGlassSegmentENS_12GlassSegmentEb                                  
-0     00008b5a  _ZN8MeterLcd5PrintEPKc                                                             
-0     00008b97  Interrupt_initVectorTable                                                          
-0     00008bb5  memcpy                                                                             
-0     00008c09  main                                                                               
-0     00008c24  SysCtl_getLowSpeedClock                                                            
-0     00008d03  _ZN34_GLOBAL__N__10_hw_i2c_cpp_842102a911WaitForStopEv                             
-0     00008d1a  _ZN34_GLOBAL__N__10_hw_i2c_cpp_842102a914WaitForBusFreeEv                          
-0     00008d31  _c_int00                                                                           
-0     00008d74  Interrupt_defaultHandler                                                           
-0     00008e83  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c11SendCommandEj                          
-0     00008e97  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c9MakeIcsetEjb                            
-0     00008f1b  Device_initGPIO                                                                    
-0     00008f73  __TI_zero_init_nomemset                                                            
-0     00008f80  _args_main                                                                         
-0     00008fad  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c15IsValidLocationERKNS_15SegmentLocationE
-0     00008fb8  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c20IsMappedSegmentLabelEj                 
-0     00008fc3  Interrupt_illegalOperationHandler                                                  
-0     00008fcd  Interrupt_nmiHandler                                                               
-0     00008fd7  _register_unlock                                                                   
-0     00008fdb  _register_lock                                                                     
-0     00008fdf  _nop                                                                               
-0     00008fe0  __TI_decompress_none                                                               
-0     00008ff7  _ZN8MeterLcd5ClearEv                                                               
-0     00008ffe  _system_pre_init                                                                   
-0     00009000  _ZN8MeterLcd7RefreshEv                                                             
-0     00009007  __error__                                                                          
-0     0000900e  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c11MakeCommandEj                          
-0     00009014  Board_init                                                                         
-0     00009019  _Z1Vv                                                                              
-0     0000901e  _Z1kv                                                                              
-0     00009023  PinMux_init                                                                        
-0     00009024  _system_post_cinit                                                                 
+0     000088b7  _ZN8MeterLcd14PrintErrorCodeEj                                                     
+0     000088f1  __TI_auto_init_nobinit                                                             
+0     00008929  GPIO_setPinConfig                                                                  
+0     00008960  GPIO_setQualificationMode                                                          
+0     00008997  _ZN8MeterLcd8WriteRamEjPKjj                                                        
+0     000089c9  GPIO_setDirectionMode                                                              
+0     000089fa  _ZN8MeterLcd9SetRamBitEjjb                                                         
+0     00008a2a  __TI_decompress_lzss                                                               
+0     00008a58  _ZN34_GLOBAL__N__10_hw_i2c_cpp_842102a918WaitForTxFifoEmptyEv                      
+0     00008a81  C$$EXIT                                                                            
+0     00008a81  abort                                                                              
+0     00008a83  exit                                                                               
+0     00008aaa  _ZN8MeterLcd10SetSegmentENS_3ComEjb                                                
+0     00008af7  SysCtl_selectXTALSingleEnded                                                       
+0     00008b1c  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c15EncodedMainCharEcPj                    
+0     00008b65  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c16SegmentFromSheetEjN8MeterLcd3ComE      
+0     00008b88  _ZN8MeterLcd4InitEv                                                                
+0     00008baa  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c12WriteRamPageEjPKjj                     
+0     00008bcb  _ZN8MeterLcd15SetGlassSegmentENS_12GlassSegmentEb                                  
+0     00008beb  main                                                                               
+0     00008c28  Interrupt_initVectorTable                                                          
+0     00008c46  memcpy                                                                             
+0     00008d5f  _ZN34_GLOBAL__N__10_hw_i2c_cpp_842102a911WaitForStopEv                             
+0     00008d76  _ZN34_GLOBAL__N__10_hw_i2c_cpp_842102a914WaitForBusFreeEv                          
+0     00008d8d  _c_int00                                                                           
+0     00008dd0  Interrupt_defaultHandler                                                           
+0     00008edf  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c11SendCommandEj                          
+0     00008ef3  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c9MakeIcsetEjb                            
+0     00008f87  Device_initGPIO                                                                    
+0     00008fdf  __TI_zero_init_nomemset                                                            
+0     00008fec  _args_main                                                                         
+0     00008ff8  _Z14LCD_SetSegmentN8MeterLcd3ComEjb                                                
+0     00009021  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c15IsValidLocationERKNS_15SegmentLocationE
+0     0000902c  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c20IsMappedSegmentLabelEj                 
+0     00009037  __c28xabi_divu                                                                     
+0     0000903c  __c28xabi_modu                                                                     
+0     00009042  Interrupt_illegalOperationHandler                                                  
+0     0000904c  Interrupt_nmiHandler                                                               
+0     00009056  _register_unlock                                                                   
+0     0000905a  _register_lock                                                                     
+0     0000905e  _nop                                                                               
+0     0000905f  __TI_decompress_none                                                               
+0     00009076  _ZN8MeterLcd5ClearEv                                                               
+0     0000907d  _ZN8MeterLcd7RefreshEv                                                             
+0     00009084  __error__                                                                          
+0     0000908b  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c11MakeCommandEj                          
+0     00009091  Board_init                                                                         
+0     00009096  _Z1Vv                                                                              
+0     0000909b  _Z1kv                                                                              
+0     000090a0  _system_pre_init                                                                   
+0     000090a2  C2000Ware_libraries_init                                                           
+0     000090a3  PinMux_init                                                                        
+0     000090a4  _system_post_cinit                                                                 
 1     00000400  __stack                                                                            
 1     000007f8  __TI_STACK_END                                                                     
-1     0000ab1e  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c11gDisplayRamE                           
-1     0000ab4e  __TI_enable_exit_profile_output                                                    
-1     0000ab50  __TI_cleanup_ptr                                                                   
-1     0000ab52  __TI_dtors_ptr                                                                     
-1     0000ab54  _lock                                                                              
-1     0000ab56  _unlock                                                                            
+1     0000ab15  _ZN37_GLOBAL__N__13_meter_lcd_cpp_4b68d83c11gDisplayRamE                           
+1     0000ab46  __TI_enable_exit_profile_output                                                    
+1     0000ab48  __TI_cleanup_ptr                                                                   
+1     0000ab4a  __TI_dtors_ptr                                                                     
+1     0000ab4c  _lock                                                                              
+1     0000ab4e  _unlock                                                                            
 abs   000003f8  __TI_STACK_SIZE                                                                    
 abs   ffffffff  __TI_pprof_out_hndl                                                                
 abs   ffffffff  __TI_prof_data_size                                                                
 abs   ffffffff  __TI_prof_data_start                                                               
 n/a   UNDEFED   __c_args__                                                                         
 
-[87 symbols]
+[92 symbols]

@@ -1,0 +1,676 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/z0copn",
+    "id": "z0copn",
+    "slide": 5,
+    "layoutId": "b7b5fb79-2c85-42fa-a20a-33d36eea90c7",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "2fdd5624-6156-49e8-bdda-17eb6eda92ee",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFFFFF",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "b7b5fb79-2c85-42fa-a20a-33d36eea90c7",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "2fdd5624-6156-49e8-bdda-17eb6eda92ee",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "2fdd5624-6156-49e8-bdda-17eb6eda92ee",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8bulsra1",
+      "id": "1",
+      "bbox": [
+        56,
+        40,
+        500,
+        30
+      ],
+      "geometry": "rect",
+      "text": "GY1401 SYMBOLS",
+      "textPreview": "GY1401 SYMBOLS",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#5F6872",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "GY1401 SYMBOLS"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "GY1401 SYMBOLS",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#5F6872",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "GY1401 SYMBOLS",
+              "fontSize": 15,
+              "color": "#5F6872",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7qlkzm9g",
+      "id": "2",
+      "bbox": [
+        56,
+        82,
+        1030,
+        88
+      ],
+      "geometry": "rect",
+      "text": "Fixed glass symbols are controlled as named segments",
+      "textPreview": "Fixed glass symbols are controlled as named segments",
+      "resolvedFontSize": 42,
+      "resolvedTextStyle": {
+        "fontSize": 42,
+        "typeface": "+mn-lt",
+        "color": "#101418",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Fixed glass symbols are controlled as named segments"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Fixed glass symbols are controlled as named segments",
+          "resolvedTextStyle": {
+            "fontSize": 42,
+            "color": "#101418",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Fixed glass symbols are controlled as named segments",
+              "fontSize": 42,
+              "color": "#101418",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6pc3qhsv",
+      "id": "3",
+      "bbox": [
+        56,
+        178,
+        1168,
+        2
+      ],
+      "geometry": "rect",
+      "fillColor": "#C8CDD3",
+      "lineColor": "#C8CDD3",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hgn25wri",
+      "id": "4",
+      "bbox": [
+        56,
+        216,
+        700,
+        78
+      ],
+      "geometry": "rect",
+      "text": "Units and status marks such as kW, kWh, Ah, arrows, warning, signal bars and battery segments are physical glass symbols, not arbitrary text.",
+      "textPreview": "Units and status marks such as kW, kWh, Ah, arrows, warning, signal bars and battery segments are physical glass symbols, not arbitrary t...",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "color": "#5F6872",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Units and status marks such as kW, kWh, Ah, arrows, warning, signal"
+          },
+          {
+            "index": 2,
+            "text": "bars and battery segments are physical glass symbols, not arbitrary"
+          },
+          {
+            "index": 3,
+            "text": "text."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Units and status marks such as kW, kWh, Ah, arrows, warning, signal bars and battery segments are physical glass symbols, not arbitrary text.",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#5F6872",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Units and status marks such as kW, kWh, Ah, arrows, warning, signal bars and battery segments are physical glass symbols, not arbitrary text.",
+              "fontSize": 24,
+              "color": "#5F6872",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gfelwbax",
+      "id": "5",
+      "bbox": [
+        56,
+        340,
+        44,
+        28
+      ],
+      "geometry": "rect",
+      "text": "01",
+      "textPreview": "01",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#1E88E5",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "01"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "01",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#1E88E5",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "01",
+              "fontSize": 16,
+              "color": "#1E88E5",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ve5k369c",
+      "id": "6",
+      "bbox": [
+        114,
+        338,
+        662,
+        34
+      ],
+      "geometry": "rect",
+      "text": "The COM/SEG table maps each etched symbol to a controller RAM bit.",
+      "textPreview": "The COM/SEG table maps each etched symbol to a controller RAM bit.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "color": "#101418",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The COM/SEG table maps each etched symbol to a controller RAM bit."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The COM/SEG table maps each etched symbol to a controller RAM bit.",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "color": "#101418",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "The COM/SEG table maps each etched symbol to a controller RAM bit.",
+              "fontSize": 22,
+              "color": "#101418",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/udw3u1sr",
+      "id": "7",
+      "bbox": [
+        56,
+        388,
+        44,
+        28
+      ],
+      "geometry": "rect",
+      "text": "02",
+      "textPreview": "02",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#1E88E5",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "02"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "02",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#1E88E5",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "02",
+              "fontSize": 16,
+              "color": "#1E88E5",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5k7m9gre",
+      "id": "8",
+      "bbox": [
+        114,
+        386,
+        662,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Raw testing uses SetGlassSegment(Kxx, ON/OFF).",
+      "textPreview": "Raw testing uses SetGlassSegment(Kxx, ON/OFF).",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "color": "#101418",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Raw testing uses SetGlassSegment(Kxx, ON/OFF)."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Raw testing uses SetGlassSegment(Kxx, ON/OFF).",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "color": "#101418",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Raw testing uses SetGlassSegment(Kxx, ON/OFF).",
+              "fontSize": 22,
+              "color": "#101418",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4jel0bat",
+      "id": "9",
+      "bbox": [
+        56,
+        436,
+        44,
+        28
+      ],
+      "geometry": "rect",
+      "text": "03",
+      "textPreview": "03",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#1E88E5",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "03"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "03",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#1E88E5",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "03",
+              "fontSize": 16,
+              "color": "#1E88E5",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6pgvel8r",
+      "id": "10",
+      "bbox": [
+        114,
+        434,
+        662,
+        34
+      ],
+      "geometry": "rect",
+      "text": "Future helpers can group symbols into ShowUnitKWh(), ShowWarning(), and SetBatteryLevel().",
+      "textPreview": "Future helpers can group symbols into ShowUnitKWh(), ShowWarning(), and SetBatteryLevel().",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "color": "#101418",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Future helpers can group symbols into ShowUnitKWh(), ShowWarning(),"
+          },
+          {
+            "index": 2,
+            "text": "and SetBatteryLevel()."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Future helpers can group symbols into ShowUnitKWh(), ShowWarning(), and SetBatteryLevel().",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "color": "#101418",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Future helpers can group symbols into ShowUnitKWh(), ShowWarning(), and SetBatteryLevel().",
+              "fontSize": 22,
+              "color": "#101418",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/obel8n65",
+      "id": "11",
+      "bbox": [
+        820,
+        220,
+        340,
+        315
+      ],
+      "alt": "GY1401 fixed symbol mapping",
+      "contentType": "image/png",
+      "imageCrop": {
+        "left": 0,
+        "top": 0,
+        "right": 0.45,
+        "bottom": 0.18
+      },
+      "imageFit": "cover",
+      "asset": {
+        "assetId": "d7691dd6-c5fb-4170-aab2-1ce881a494f8",
+        "contentType": "image/png",
+        "byteLength": 67500
+      }
+    }
+  ],
+  "composeRuns": []
+}

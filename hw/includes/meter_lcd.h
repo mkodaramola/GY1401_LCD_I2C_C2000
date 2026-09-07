@@ -44,11 +44,13 @@ namespace MeterLcd
     bool Refresh();
     bool WriteRam(uint8_t startAddress, const uint8_t *data, uint16_t length);
     bool SetSegment(Com com, uint8_t segmentPin, bool on);
+    bool SetRawSegment(Com com, uint8_t segmentPin, bool on);
     bool SetGlassSegment(GlassSegment segment, bool on);
     bool SetRamBit(uint8_t ddramAddress, uint8_t comMask, bool on);
     bool PutChar(uint8_t position, char value);
     bool SetDecimalPoint(uint8_t position, bool on);
     bool Print(const char *text);
+    bool PrintErrorCode(uint8_t errorCode);
 }
 
 #define ON true
@@ -107,6 +109,11 @@ namespace MeterLcd
 inline bool LCD_SetSegment(MeterLcd::Com com, uint8_t segmentPin, bool on)
 {
     return MeterLcd::SetSegment(com, segmentPin, on);
+}
+
+inline bool LCD_SetRawSegment(MeterLcd::Com com, uint8_t segmentPin, bool on)
+{
+    return MeterLcd::SetRawSegment(com, segmentPin, on);
 }
 
 #endif

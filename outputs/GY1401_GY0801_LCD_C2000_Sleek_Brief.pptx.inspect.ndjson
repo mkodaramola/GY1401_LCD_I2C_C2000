@@ -1,0 +1,108 @@
+{"kind":"deck","id":"pr/jvgc7x","name":"Deck"}
+{"kind":"layout","layoutId":"83c89e61-2bfc-49f4-bcda-a9040b74b778","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"29020c48-2581-4dfa-98df-183616d7cf0e","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/zwzl52","slide":1,"title":"C2000 LCD UI BRING-UP","textShapes":4}
+{"kind":"shape","id":"sh/grix0nm1","slide":1,"bbox":[760,0,520,720]}
+{"kind":"shape","id":"sh/v69gri5g","slide":1,"bbox":[0,610,760,110]}
+{"kind":"textbox","id":"sh/u50fyx4v","slide":1,"text":"C2000 LCD UI BRING-UP","textPreview":"C2000 LCD UI BRING-UP","textChars":21,"textLines":1,"bbox":[64,66,420,28]}
+{"kind":"textbox","id":"sh/pwbyxc3i","slide":1,"text":"Segmented LCD drivers for energy meter displays","textPreview":"Segmented LCD drivers for energy meter displays","textChars":47,"textLines":1,"bbox":[64,126,650,220]}
+{"kind":"textbox","id":"sh/4v2h47mx","slide":1,"text":"GY1401 over I2C + GY0801 over HT1621-style GPIO","textPreview":"GY1401 over I2C + GY0801 over HT1621-style GPIO","textChars":47,"textLines":1,"bbox":[64,382,600,45]}
+{"kind":"textbox","id":"sh/l07yl8ne","slide":1,"text":"Future C2000-based energy meter application","textPreview":"Future C2000-based energy meter application","textChars":43,"textLines":1,"bbox":[64,640,640,34]}
+{"kind":"image","id":"im/6l4ji583","slide":1,"name":"","alt":"GY0801 annotated LCD map","bbox":[804,70,400,286]}
+{"kind":"image","id":"im/7mdkba9o","slide":1,"name":"","alt":"GY1401 COM SEG map","bbox":[804,390,400,205]}
+{"kind":"notes","id":"nt/zwzl52","slide":1,"text":"[Sources]\nC:/Users/mkoda/workspace_ccstheia/LCD_I2C\nC:/Users/mkoda/workspace_ccstheia/GY0801_LCD\nC:/Users/mkoda/Documents/lcd materials\nC:/Users/mkoda/Documents/Premauda/GY0801 LCD Materials"}
+{"kind":"slide","id":"sl/lsnkwm","slide":2,"title":"GY1401 CONFIGURATION","textShapes":9}
+{"kind":"shape","id":"sh/s7qtsbyh","slide":2,"bbox":[0,0,1280,96]}
+{"kind":"shape","id":"sh/rmhsj6hw","slide":2,"bbox":[0,96,1280,8]}
+{"kind":"textbox","id":"sh/ql8bq1gb","slide":2,"text":"GY1401 CONFIGURATION","textPreview":"GY1401 CONFIGURATION","textChars":20,"textLines":1,"bbox":[64,26,520,28]}
+{"kind":"textbox","id":"sh/5kzahwz6","slide":2,"text":"I2C brings the CN91C4S48 glass to life","textPreview":"I2C brings the CN91C4S48 glass to life","textChars":38,"textLines":1,"bbox":[64,128,1040,100]}
+{"kind":"shape","id":"sh/4jqtoryl","slide":2,"bbox":[272,372,74,42]}
+{"kind":"shape","id":"sh/3ihsv6h0","slide":2,"bbox":[522,372,74,42]}
+{"kind":"shape","id":"sh/ih8bm1gf","slide":2,"bbox":[772,372,74,42]}
+{"kind":"textbox","id":"sh/hgzatwzu","slide":2,"text":"C2000\nI2CA","textPreview":"C2000 | I2CA","textChars":10,"textLines":2,"bbox":[92,318,170,150]}
+{"kind":"textbox","id":"sh/wf6tkry9","slide":2,"text":"0x3E\nLCD address","textPreview":"0x3E | LCD address","textChars":16,"textLines":2,"bbox":[352,318,170,150]}
+{"kind":"textbox","id":"sh/elsjyh8j","slide":2,"text":"CN91C4S48\nsetup","textPreview":"CN91C4S48 | setup","textChars":15,"textLines":2,"bbox":[612,318,170,150]}
+{"kind":"textbox","id":"sh/fm107mp4","slide":2,"text":"DDRAM\nwrites","textPreview":"DDRAM | writes","textChars":12,"textLines":2,"bbox":[872,318,170,150]}
+{"kind":"textbox","id":"sh/0nu10rq9","slide":2,"text":"Startup sequence","textPreview":"Startup sequence","textChars":16,"textLines":1,"bbox":[92,560,340,32]}
+{"kind":"textbox","id":"sh/18329w7u","slide":2,"text":"ICSET -> DISCTL -> EVRSET -> BLKCTL -> APCTL -> MODSET -> Clear RAM","textPreview":"ICSET -> DISCTL -> EVRSET -> BLKCTL -> APCTL -> MODSET -> Clear RAM","textChars":67,"textLines":1,"bbox":[92,600,980,38]}
+{"kind":"textbox","id":"sh/qhsjux87","slide":2,"text":"tested path","textPreview":"tested path","textChars":11,"textLines":1,"bbox":[1056,336,138,34]}
+{"kind":"notes","id":"nt/lsnkwm","slide":2,"text":"[Sources]\nC:/Users/mkoda/workspace_ccstheia/LCD_I2C/hw/hw_i2c.cpp\nC:/Users/mkoda/workspace_ccstheia/LCD_I2C/hw/meter_lcd.cpp\nC:/Users/mkoda/Documents/lcd materials/CN91C4S48_i2c.pdf"}
+{"kind":"slide","id":"sl/lzy7gt","slide":3,"title":"GY1401 PROGRAMMING","textShapes":7}
+{"kind":"shape","id":"sh/947epoz6","slide":3,"bbox":[0,0,1280,96]}
+{"kind":"shape","id":"sh/mhgve90v","slide":3,"bbox":[0,96,1280,8]}
+{"kind":"textbox","id":"sh/72pwne1g","slide":3,"text":"GY1401 PROGRAMMING","textPreview":"GY1401 PROGRAMMING","textChars":18,"textLines":1,"bbox":[64,26,520,28]}
+{"kind":"textbox","id":"sh/kfedcjip","slide":3,"text":"Digits are packed bytes, not ASCII characters","textPreview":"Digits are packed bytes, not ASCII characters","textChars":45,"textLines":1,"bbox":[64,128,1040,100]}
+{"kind":"shape","id":"sh/ydwva90j","slide":3,"bbox":[70,250,260,230]}
+{"kind":"shape","id":"sh/ze5wje14","slide":3,"bbox":[370,250,260,230]}
+{"kind":"textbox","id":"sh/cbed8zit","slide":3,"text":"LUT","textPreview":"LUT","textChars":3,"textLines":1,"bbox":[104,286,180,42]}
+{"kind":"textbox","id":"sh/xcneh4jy","slide":3,"text":"0 = FA\n1 = 0A\n8 = FE\n9 = CE","textPreview":"0 = FA | 1 = 0A | 8 = FE | 9 = CE","textChars":27,"textLines":4,"bbox":[104,348,180,110]}
+{"kind":"textbox","id":"sh/5ory5wnu","slide":3,"text":"Window","textPreview":"Window","textChars":6,"textLines":1,"bbox":[404,286,180,42]}
+{"kind":"textbox","id":"sh/knihwrm9","slide":3,"text":"DDRAM 0x18\n11 bytes\nright aligned","textPreview":"DDRAM 0x18 | 11 bytes | right aligned","textChars":33,"textLines":3,"bbox":[404,348,190,110]}
+{"kind":"textbox","id":"sh/j29g3m5o","slide":3,"text":"Fixed units and icons use the etched COM/SEG map: kWh, Ah, arrows, warning, battery and signal indicators.","textPreview":"Fixed units and icons use the etched COM/SEG map: kWh, Ah, arrows, warning, battery and signal indicators.","textChars":106,"textLines":1,"bbox":[70,548,940,64]}
+{"kind":"image","id":"im/wzal0n65","slide":3,"name":"","alt":"GY1401 COM SEG crop","bbox":[704,210,480,330]}
+{"kind":"notes","id":"nt/lzy7gt","slide":3,"text":"[Sources]\nC:/Users/mkoda/workspace_ccstheia/LCD_I2C/hw/meter_lcd.cpp\nC:/Users/mkoda/Documents/lcd materials/lcd mspm0  code/util_ui_lcd_lu.h\nC:/Users/mkoda/Documents/lcd materials/COM_SEG Mapping Table.PNG"}
+{"kind":"slide","id":"sl/8gu5no","slide":4,"title":"GY1401 ENERGY METER USE","textShapes":7}
+{"kind":"shape","id":"sh/etwjah8z","slide":4,"bbox":[0,0,1280,96]}
+{"kind":"shape","id":"sh/1wn25c7q","slide":4,"bbox":[0,96,1280,8]}
+{"kind":"textbox","id":"sh/0ve1c7q5","slide":4,"text":"GY1401 ENERGY METER USE","textPreview":"GY1401 ENERGY METER USE","textChars":23,"textLines":1,"bbox":[64,26,520,28]}
+{"kind":"textbox","id":"sh/rq5kz2po","slide":4,"text":"The LCD layer should stay separate from meter state logic","textPreview":"The LCD layer should stay separate from meter state logic","textChars":57,"textLines":1,"bbox":[64,128,1040,100]}
+{"kind":"shape","id":"sh/q5cj6x83","slide":4,"bbox":[318,372,64,38]}
+{"kind":"shape","id":"sh/dsn21c7u","slide":4,"bbox":[588,372,64,38]}
+{"kind":"shape","id":"sh/sre187q9","slide":4,"bbox":[858,372,64,38]}
+{"kind":"textbox","id":"sh/bmpkb6ps","slide":4,"text":"Measurements\nV, A, kW, kWh","textPreview":"Measurements | V, A, kW, kWh","textChars":26,"textLines":2,"bbox":[72,310,230,170]}
+{"kind":"textbox","id":"sh/a1gji187","slide":4,"text":"Formatter\nnumber + unit","textPreview":"Formatter | number + unit","textChars":23,"textLines":2,"bbox":[392,310,190,170]}
+{"kind":"textbox","id":"sh/k3i1gz6t","slide":4,"text":"LCD Driver\nbytes + icons","textPreview":"LCD Driver | bytes + icons","textChars":24,"textLines":2,"bbox":[662,310,190,170]}
+{"kind":"textbox","id":"sh/54r2p47e","slide":4,"text":"GY1401\nGlass","textPreview":"GY1401 | Glass","textChars":12,"textLines":2,"bbox":[932,310,190,170]}
+{"kind":"textbox","id":"sh/i10jepon","slide":4,"text":"This keeps hardware mapping changes out of application logic.","textPreview":"This keeps hardware mapping changes out of application logic.","textChars":61,"textLines":1,"bbox":[92,558,940,50]}
+{"kind":"notes","id":"nt/8gu5no","slide":4,"text":"[Sources]\nC:/Users/mkoda/workspace_ccstheia/LCD_I2C/app/main.cpp\nC:/Users/mkoda/workspace_ccstheia/LCD_I2C/hw/includes/meter_lcd.h\nC:/Users/mkoda/Documents/lcd materials/Displayable Characters.txt"}
+{"kind":"slide","id":"sl/0wzyb6","slide":5,"title":"GY0801 CONFIGURATION","textShapes":9}
+{"kind":"textbox","id":"sh/2pkje543","slide":5,"text":"GY0801 CONFIGURATION","textPreview":"GY0801 CONFIGURATION","textChars":20,"textLines":1,"bbox":[64,38,500,28]}
+{"kind":"textbox","id":"sh/psv290ne","slide":5,"text":"GY0801 uses GPIO timing for an HT1621-compatible controller","textPreview":"GY0801 uses GPIO timing for an HT1621-compatible controller","textChars":59,"textLines":1,"bbox":[64,94,780,150]}
+{"kind":"shape","id":"sh/f2tk3q5c","slide":5,"bbox":[72,330,230,130]}
+{"kind":"textbox","id":"sh/u1kjal4r","slide":5,"text":"CS 5","textPreview":"CS 5","textChars":4,"textLines":1,"bbox":[96,352,180,48]}
+{"kind":"textbox","id":"sh/hob250ni","slide":5,"text":"chip select","textPreview":"chip select","textChars":11,"textLines":1,"bbox":[96,404,176,42]}
+{"kind":"shape","id":"sh/g321cvmx","slide":5,"bbox":[330,330,230,130]}
+{"kind":"textbox","id":"sh/zyxkfu5g","slide":5,"text":"WR 4","textPreview":"WR 4","textChars":4,"textLines":1,"bbox":[354,352,180,48]}
+{"kind":"textbox","id":"sh/yx43mp4b","slide":5,"text":"serial clock","textPreview":"serial clock","textChars":12,"textLines":1,"bbox":[354,404,176,42]}
+{"kind":"shape","id":"sh/kze50jy1","slide":5,"bbox":[588,330,230,130]}
+{"kind":"textbox","id":"sh/l0769ozm","slide":5,"text":"DATA 9","textPreview":"DATA 9","textChars":6,"textLines":1,"bbox":[612,352,180,48]}
+{"kind":"textbox","id":"sh/yxwny9gv","slide":5,"text":"write data","textPreview":"write data","textChars":10,"textLines":1,"bbox":[612,404,176,42]}
+{"kind":"textbox","id":"sh/jy5o7ehg","slide":5,"text":"Startup enables SYS, RC oscillator, 1/3 bias 4-COM mode, clears RAM, then turns LCD on.","textPreview":"Startup enables SYS, RC oscillator, 1/3 bias 4-COM mode, clears RAM, then turns LCD on.","textChars":87,"textLines":1,"bbox":[72,545,1030,70]}
+{"kind":"image","id":"im/l032xs3q","slide":5,"name":"","alt":"GY0801 annotated LCD map","bbox":[772,72,420,310]}
+{"kind":"notes","id":"nt/0wzyb6","slide":5,"text":"[Sources]\nC:/Users/mkoda/workspace_ccstheia/GY0801_LCD/app/main.cpp\nC:/Users/mkoda/workspace_ccstheia/GY0801_LCD/hw/gy0801_lcd.cpp\nC:/Users/mkoda/Documents/Premauda/GY0801 LCD Materials/ht1621b.PDF"}
+{"kind":"slide","id":"sl/jwy4ii","slide":6,"title":"GY0801 PROGRAMMING","textShapes":7}
+{"kind":"shape","id":"sh/m1kzato3","slide":6,"bbox":[0,0,1280,96]}
+{"kind":"shape","id":"sh/94vi587u","slide":6,"bbox":[0,96,1280,8]}
+{"kind":"textbox","id":"sh/o3mhc369","slide":6,"text":"GY0801 PROGRAMMING","textPreview":"GY0801 PROGRAMMING","textChars":18,"textLines":1,"bbox":[64,26,520,28]}
+{"kind":"textbox","id":"sh/zytgzyps","slide":6,"text":"A shadow RAM makes icons and numbers composable","textPreview":"A shadow RAM makes icons and numbers composable","textChars":47,"textLines":1,"bbox":[64,128,1040,100]}
+{"kind":"textbox","id":"sh/10bi187y","slide":6,"text":"32-address\nshadow RAM","textPreview":"32-address | shadow RAM","textChars":21,"textLines":2,"bbox":[90,260,220,130]}
+{"kind":"textbox","id":"sh/0z2h836d","slide":6,"text":"writeText()\nwriteNumber()","textPreview":"writeText() | writeNumber()","textChars":25,"textLines":2,"bbox":[360,260,220,130]}
+{"kind":"textbox","id":"sh/ra9gvepg","slide":6,"text":"setIcon()\nsetSymbol()","textPreview":"setIcon() | setSymbol()","textChars":21,"textLines":2,"bbox":[90,430,220,130]}
+{"kind":"textbox","id":"sh/q90z29ob","slide":6,"text":"flush()\nburst write","textPreview":"flush() | burst write","textChars":19,"textLines":2,"bbox":[360,430,220,130]}
+{"kind":"textbox","id":"sh/0balgjq1","slide":6,"text":"Digits, decimal points and named icons update the same shadow buffer before a single controller refresh.","textPreview":"Digits, decimal points and named icons update the same shadow buffer before a single controller refresh.","textChars":104,"textLines":1,"bbox":[82,596,900,44]}
+{"kind":"image","id":"im/7alwvq9w","slide":6,"name":"","alt":"GY0801 truth table","bbox":[742,202,430,356]}
+{"kind":"notes","id":"nt/jwy4ii","slide":6,"text":"[Sources]\nC:/Users/mkoda/workspace_ccstheia/GY0801_LCD/hw/gy0801_lcd.cpp\nC:/Users/mkoda/workspace_ccstheia/GY0801_LCD/hw/includes/gy0801_lcd.h\nC:/Users/mkoda/workspace_ccstheia/GY0801_LCD/tmp/pdf_pages/gy0801_truth_table_current.png"}
+{"kind":"slide","id":"sl/2gtkfc","slide":7,"title":"PRO CI DISPLAY STATES","textShapes":10}
+{"kind":"shape","id":"sh/tc3a507q","slide":7,"bbox":[0,0,1280,96]}
+{"kind":"shape","id":"sh/6pcba58f","slide":7,"bbox":[0,96,1280,8]}
+{"kind":"textbox","id":"sh/rals3ap0","slide":7,"text":"PRO CI DISPLAY STATES","textPreview":"PRO CI DISPLAY STATES","textChars":21,"textLines":1,"bbox":[64,26,520,28]}
+{"kind":"textbox","id":"sh/gfetgfqh","slide":7,"text":"GY0801 can become the visible state machine","textPreview":"GY0801 can become the visible state machine","textChars":43,"textLines":1,"bbox":[64,128,1040,100]}
+{"kind":"textbox","id":"sh/1gnu9k72","slide":7,"text":"IDLE","textPreview":"IDLE","textChars":4,"textLines":1,"bbox":[70,256,185,88]}
+{"kind":"textbox","id":"sh/edwbe58b","slide":7,"text":"CHARGING","textPreview":"CHARGING","textChars":8,"textLines":1,"bbox":[296,256,185,88]}
+{"kind":"textbox","id":"sh/fe5c7apw","slide":7,"text":"DISCHARGING","textPreview":"DISCHARGING","textChars":11,"textLines":1,"bbox":[522,256,185,88]}
+{"kind":"textbox","id":"sh/wjat4bqd","slide":7,"text":"FAULT","textPreview":"FAULT","textChars":5,"textLines":1,"bbox":[748,256,185,88]}
+{"kind":"textbox","id":"sh/hkjaxgry","slide":7,"text":"LOW BATTERY","textPreview":"LOW BATTERY","textChars":11,"textLines":1,"bbox":[974,256,185,88]}
+{"kind":"textbox","id":"sh/9wbq583a","slide":7,"text":"Each state maps to:","textPreview":"Each state maps to:","textChars":19,"textLines":1,"bbox":[88,412,300,34]}
+{"kind":"textbox","id":"sh/ov29w3mp","slide":7,"text":"numeric regions  |  flow arrows  |  battery gauge  |  warning / overload icons","textPreview":"numeric regions  |  flow arrows  |  battery gauge  |  warning / overload icons","textChars":78,"textLines":1,"bbox":[88,464,1040,42]}
+{"kind":"textbox","id":"sh/nut83yl4","slide":7,"text":"Integration target: a small display adapter that listens to PRO CI state changes and writes only the LCD symbols that changed.","textPreview":"Integration target: a small display adapter that listens to PRO CI state changes and writes only the LCD symbols that changed.","textChars":126,"textLines":1,"bbox":[88,566,1000,68]}
+{"kind":"notes","id":"nt/2gtkfc","slide":7,"text":"[Sources]\nC:/Users/mkoda/workspace_ccstheia/GY0801_LCD/app/main.cpp\nUser-provided future plan: integrate GY0801 in pro_ci to display different states."}
+{"kind":"slide","id":"sl/3vrmjb","slide":8,"title":"NEXT STEP","textShapes":6}
+{"kind":"textbox","id":"sh/ehgbepcf","slide":8,"text":"NEXT STEP","textPreview":"NEXT STEP","textChars":9,"textLines":1,"bbox":[64,44,300,28]}
+{"kind":"textbox","id":"sh/1k7up4v6","slide":8,"text":"Move from LCD bring-up to production display behavior","textPreview":"Move from LCD bring-up to production display behavior","textChars":53,"textLines":1,"bbox":[64,106,840,116]}
+{"kind":"shape","id":"sh/gjytgzul","slide":8,"bbox":[365,392,60,34]}
+{"kind":"shape","id":"sh/7e5cjud4","slide":8,"bbox":[665,392,60,34]}
+{"kind":"textbox","id":"sh/6dwbapcj","slide":8,"text":"1\nDefine state map","textPreview":"1 | Define state map","textChars":18,"textLines":2,"bbox":[86,322,240,170]}
+{"kind":"textbox","id":"sh/tg7ulkvu","slide":8,"text":"2\nCreate adapter","textPreview":"2 | Create adapter","textChars":16,"textLines":2,"bbox":[448,322,240,170]}
+{"kind":"textbox","id":"sh/sfytczu9","slide":8,"text":"3\nRefresh on change","textPreview":"3 | Refresh on change","textChars":19,"textLines":2,"bbox":[810,322,240,170]}
+{"kind":"textbox","id":"sh/ba9cfed8","slide":8,"text":"Deliverable: reusable C2000 LCD UI module for energy meter status and measurement display.","textPreview":"Deliverable: reusable C2000 LCD UI module for energy meter status and measurement display.","textChars":90,"textLines":1,"bbox":[64,586,980,54]}
+{"kind":"notes","id":"nt/3vrmjb","slide":8,"text":"[Sources]\nC:/Users/mkoda/workspace_ccstheia/GY0801_LCD\nC:/Users/mkoda/workspace_ccstheia/LCD_I2C\nUser-provided future plan."}

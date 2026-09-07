@@ -46,6 +46,10 @@ const uint8_t kSemicolonPosition = 4U;
 const uint8_t kSemicolonCarryPosition = 5U;
 const uint8_t kLcdNoOverflowIndex = 9U;
 const uint8_t kAsciiZero = 48U;
+const uint8_t kErrorCodeMin = 1U;
+const uint8_t kErrorCodeMax = 15U;
+const uint8_t kErrorCodeDigitCount = 4U;
+const uint8_t kEncodedLetterE = 0xF4U;
 
 const uint8_t kEncodedDigit[10] = {
     0xFAU, 0x0AU, 0xBCU, 0x9EU, 0x4EU,
@@ -265,6 +269,34 @@ uint8_t PatternForChar(char value)
     }
 }
 
+bool EncodedMainChar(char value, uint8_t *encoded)
+{
+    if (encoded == NULL)
+    {
+        return false;
+    }
+
+    if ((value >= '0') && (value <= '9'))
+    {
+        *encoded = kEncodedDigit[static_cast<uint8_t>(value - kAsciiZero)];
+        return true;
+    }
+
+    if ((value == 'E') || (value == 'e'))
+    {
+        *encoded = kEncodedLetterE;
+        return true;
+    }
+
+    if (value == ' ')
+    {
+        *encoded = 0U;
+        return true;
+    }
+
+    return false;
+}
+
 void ApplyPattern(uint8_t position, uint8_t pattern)
 {
     if (position >= MeterLcd::kDigitCount)
@@ -350,6 +382,93 @@ bool EncodeMainNumber(const char *text, uint8_t *encoded)
                 {
                     encoded[outputIndex] |= 0x04U;
                 }
+            }
+            else
+            {
+                encoded[outputIndex] =
+                    static_cast<uint8_t>((lcdValue << kNibbleSize) | carry);
+            }
+
+            carry = static_cast<uint8_t>(lcdValue >> kNibbleSize);
+        }
+        else if (digitCounter == kSemicolonPosition)
+        {
+            encoded[outputIndex] = carry;
+            charIndex++;
+        }
+        else
+        {
+            encoded[outputIndex] = lcdValue;
+        }
+
+        digitCounter++;
+
+        if (outputIndex == 0U)
+        {
+            break;
+        }
+        outputIndex--;
+    }
+
+    if ((digitCounter < kSemicolonCarryPosition) &&
+        (digitCounter >= kDecimalPointPosition))
+    {
+        encoded[outputIndex] = carry;
+    }
+
+    return true;
+}
+
+bool EncodeMainText(const char *text, uint8_t *encoded)
+{
+    char chars[MeterLcd::kMainMessageDigitCount + 1U];
+    uint8_t count = 0U;
+
+    if ((text == NULL) || (encoded == NULL))
+    {
+        return false;
+    }
+
+    memset(encoded, 0, MeterLcd::kMainMessageBytes);
+
+    for (uint16_t i = 0U; text[i] != '\0'; i++)
+    {
+        uint8_t lcdValue = 0U;
+        if ((EncodedMainChar(text[i], &lcdValue) == true) &&
+            (count < MeterLcd::kMainMessageDigitCount))
+        {
+            chars[count] = text[i];
+            count++;
+        }
+    }
+
+    if (count == 0U)
+    {
+        return true;
+    }
+
+    uint8_t outputIndex = kLcdNoOverflowIndex;
+    uint8_t digitCounter = 0U;
+    uint8_t carry = 0U;
+
+    for (uint8_t charIndex = count; charIndex > 0U; charIndex--)
+    {
+        uint8_t lcdValue = 0U;
+        if (EncodedMainChar(chars[charIndex - 1U], &lcdValue) == false)
+        {
+            return false;
+        }
+
+        if (digitCounter < kDecimalPointPosition)
+        {
+            encoded[outputIndex] = lcdValue;
+        }
+        else if (digitCounter < kSemicolonPosition)
+        {
+            if (digitCounter == kDecimalPointPosition)
+            {
+                encoded[outputIndex] =
+                    static_cast<uint8_t>(lcdValue << kNibbleSize);
             }
             else
             {
@@ -483,6 +602,22 @@ bool MeterLcd::WriteRam(uint8_t startAddress, const uint8_t *data, uint16_t leng
 
 bool MeterLcd::SetSegment(Com com, uint8_t segmentPin, bool on)
 {
+    if (com > COM3)
+    {
+        return false;
+    }
+
+    const SegmentLocation location = SegmentFromSheet(segmentPin, com);
+    if (IsValidLocation(location) == false)
+    {
+        return false;
+    }
+
+    return SetRamBit(location.address, location.mask, on);
+}
+
+bool MeterLcd::SetRawSegment(Com com, uint8_t segmentPin, bool on)
+{
     if ((com > COM3) || (IsMappedSegmentLabel(segmentPin) == false))
     {
         return false;
@@ -517,6 +652,12 @@ bool MeterLcd::SetRamBit(uint8_t ddramAddress, uint8_t comMask, bool on)
     if (ddramAddress > kDdramMaxAddress)
     {
         return false;
+    }
+
+    const bool isOn = ((gDisplayRam[ddramAddress] & comMask) != 0U);
+    if (isOn == on)
+    {
+        return true;
     }
 
     if (on)
@@ -585,6 +726,37 @@ bool MeterLcd::Print(const char *text)
     uint8_t mainMessage[MeterLcd::kMainMessageBytes];
 
     if (EncodeMainNumber(text, mainMessage) == false)
+    {
+        return false;
+    }
+
+    memset(gDisplayRam, 0, sizeof(gDisplayRam));
+    memcpy(&gDisplayRam[kMainMessageStartAddress],
+           mainMessage,
+           sizeof(mainMessage));
+
+    return WriteRam(kMainMessageStartAddress,
+                    mainMessage,
+                    static_cast<uint16_t>(sizeof(mainMessage)));
+}
+
+bool MeterLcd::PrintErrorCode(uint8_t errorCode)
+{
+    uint8_t mainMessage[MeterLcd::kMainMessageBytes];
+
+    if ((errorCode < kErrorCodeMin) || (errorCode > kErrorCodeMax))
+    {
+        return false;
+    }
+
+    char message[kErrorCodeDigitCount + 1U];
+    message[0] = 'E';
+    message[1] = '0';
+    message[2] = static_cast<char>(kAsciiZero + (errorCode / 10U));
+    message[3] = static_cast<char>(kAsciiZero + (errorCode % 10U));
+    message[4] = '\0';
+
+    if (EncodeMainText(message, mainMessage) == false)
     {
         return false;
     }

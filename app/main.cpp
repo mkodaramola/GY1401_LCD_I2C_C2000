@@ -4,7 +4,7 @@
 #include "driverlib.h"
 #include "hw_i2c.h"
 #include "meter_lcd.h"
-
+ 
 void G(){
     MeterLcd::SetGlassSegment(MeterLcd::K42, ON);
 }
@@ -61,10 +61,10 @@ void DISCONNECTED(){
     MeterLcd::SetGlassSegment(MeterLcd::K14, ON);
     MeterLcd::SetGlassSegment(MeterLcd::K15, ON);
 }
+uint8_t i = 0;
 
-
-void main(void)
-{
+void main(void){
+    
     Device_init();
     Device_initGPIO();
 
@@ -77,20 +77,29 @@ void main(void)
     HwI2C::Init();
     MeterLcd::Init();
 
-    MeterLcd::Print("6518.26");
+    MeterLcd::PrintErrorCode(5U);
+
     k(); V();
-
-
-    // Turn on some fixed icons/letters
 
     
     // MeterLcd::SetGlassSegment(MeterLcd::K5, ON);
+
+   
+    LCD_SetSegment(COM2, 26U, ON);
+    
 
     EINT;
     ERTM;
 
     while (1)
     {
+
+        // for (i = 0;i<87;i++){
+
+        //     DEVICE_DELAY_US(2000000);
+
+
+        // }
      
     }
 }
